@@ -1,0 +1,52 @@
+.payment-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+.payment-section .form-group {
+  margin-bottom: 15px;
+}
+.payment-section .form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.payment-section .form-group select,
+.payment-section .form-group input[type=file] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.payment-section .form-group .error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.payment-section .price-section {
+  margin: 20px 0;
+}
+.payment-section .price-section h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+.payment-section button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.payment-section button:hover {
+  background-color: #45a049;
+}
+.payment-section button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}/*# sourceMappingURL=style.css.map */
