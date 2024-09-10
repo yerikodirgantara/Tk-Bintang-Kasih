@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Cardslider from '../components/Carousel/Cardslider.vue';
 import Ayahsiswa from '../components/Dataayah/Ayahsiswa.vue';
 import Ibusiswa from '../components/Dataibu/Ibusiswa.vue';
 import Formkb from '../components/Kb/Formkb.vue'; 
@@ -8,11 +7,9 @@ import Navmenu from '../components/Navbar/Navmenu.vue';
 import Formtk from '../components/Tk/Formtk.vue'; 
 import Ayahsiswa2 from '../components/Dataayah2/Ayahsiswa2.vue';
 import Ibusiswa2 from '../components/Dataibu2/Ibusiswa2.vue';
-import Harga from '../components/Harga/Pembayaran.vue';
 import Pembayaran from '../components/Harga/Pembayaran.vue';
 
 const routes = [
-  { path: '/Cardslider', name: 'Cardslider', component: Cardslider },
   { path: '/Ayahsiswa', name: 'Ayahsiswa', component: Ayahsiswa },
   { path: '/Ibusiswa', name: 'Ibusiswa', component: Ibusiswa },  
   { path: '/Formkb', name: 'Formkb', component: Formkb }, 
