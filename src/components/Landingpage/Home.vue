@@ -564,11 +564,11 @@ section {
     position: fixed;
     width: 50px;
     height: 50px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 40px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 50px;
+    border-radius: 30px;
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
