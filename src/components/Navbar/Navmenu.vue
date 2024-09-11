@@ -16,20 +16,23 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Beranda</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sejarah">Sejarah</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="keunggulanDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Keunggulan
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="keunggulanDropdown">
+              <li><a class="dropdown-item" href="#visi-misi">Visi & Misi</a></li>
+              <li><a class="dropdown-item" href="#lokasi-sekolah">Lokasi Sekolah</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#visi-misi">Visi & Misi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#lokasi-sekolah">Lokasi Sekolah</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#bagan-organisasi">Daftar Guru</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pendaftaran">Pendaftaran Siswa</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="guruDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Daftar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="guruDropdown">
+              <li><a class="dropdown-item" href="#bagan-organisasi">Daftar Guru</a></li>
+              <li><a class="dropdown-item" href="#pendaftaran">Daftar Siswa</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -50,12 +53,15 @@ export default {
 <style scoped>
 /* Fixed Navbar styling */
 .navbar {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(127, 134, 212, 0.7); /* Tambahkan bayangan ungu di bawah navbar */
 }
 
 .navbar-brand img {
-  width: 60px; /* Sesuaikan ukuran logo */
+  width: 40px; /* Sesuaikan ukuran logo */
 }
 
 .navbar-nav .nav-link {
@@ -74,7 +80,7 @@ export default {
   height: 3px;
   bottom: 0;
   left: -100%;
-  background-color: #7f86d4; /*warna garis */ 
+  background-color: #7f86d4; /* warna garis */ 
   transition: all 0.4s ease; /* Kecepatan animasi */
 }
 
@@ -89,6 +95,7 @@ export default {
 body {
   padding-top: 80px; /* Agar konten tidak tertutup oleh navbar */
 }
+
 
 /* Custom Hamburger Menu Icon */
 .navbar-toggler {

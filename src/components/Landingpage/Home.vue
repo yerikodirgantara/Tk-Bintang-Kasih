@@ -50,7 +50,7 @@
     <!-- Sejarah Section with Container -->
     <section id="sejarah" class="my-5">
       <div class="container">
-        <h2 class="text-center mb-4">Sejarah Singkat TK Bintang Kasih</h2>
+        <h2 class="text-center mb-4">Keunggulan TK Bintang Kasih</h2>
         <div class="row">
           <div class="col-md-4">
             <div class="card text-center">
@@ -114,16 +114,32 @@
   </section>
 
 
-    <!-- Lokasi Sekolah Section -->
-    <section id="lokasi-sekolah" class="container my-5 section-box">
-      <h2 class="text-center mb-4">Lokasi Sekolah</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
+<!-- Lokasi Sekolah Section -->
+<section id="lokasi-sekolah" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Lokasi Sekolah & Kontak Kami</h2>
+  <div class="row justify-content-center">
+    <!-- Kolom Lokasi -->
+    <div class="col-md-6">
+      <h4 class="text-center">Lokasi Sekolah</h4>
+      <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <!-- Kolom Kontak Kami -->
+    <div class="col-md-6">
+      <h4 class="text-center">Kontak Kami</h4>
+      <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
+      <ul class="list-unstyled p-3">
+        <li><strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang</li>
+        <li><strong>Telepon:</strong> (024) 123-4567</li>
+        <li><strong>Email:</strong> info@bintangkasih.sch.id</li>
+        <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 16.00</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
     <!-- Organizational Chart Section -->
     <section id="bagan-organisasi" class="container my-5 section-box">
@@ -306,11 +322,15 @@ export default {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  margin-top: 100px; /* Agar tidak nabrak dengan navbar */
 }
 .carousel-item img {
-  width: 150%;
-  height: 180vh; 
+  width: 100%;
+  height: 100vh; 
   object-fit: contain; 
+}
+h2, h5 {
+  color: #7f86d4; /* Warna ungu */
 }
 .content {
   z-index: 1;
@@ -319,47 +339,40 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 90%;
+  max-width: 600px;
 }
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
 }
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 /* Typewriter Effect Styling */
 .typewriter-effect {
   display: inline-block;
   position: relative;
   font-family: monospace;
-  font-size: 4.5rem; /* Sesuaikan ukuran font */
-  white-space: nowrap; /* Prevent line breaks */
+  font-size: 3.5rem;
+  white-space: nowrap;
 }
-
 .cursor {
   display: inline-block;
   position: absolute;
-  right: -0.1em; /* Adjust as needed to align with text */
+  right: -0.1em;
   bottom: 0;
-  font-size: 4rem; /* Sesuaikan ukuran font cursor */
+  font-size: 3.5rem;
   color: #7c82c0;
   animation: blink-caret 0.75s step-end infinite;
 }
-
 @keyframes blink-caret {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.hero-title {
-  text-align: center;
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
 }
 .btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 /* Cards Styling */
@@ -369,18 +382,19 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.205);
   padding: 20px;
   border-radius: 10px;
+  height: 100%;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 .card i {
   color: #007bff;
 }
 .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 .text-justify {
   text-align: justify;
@@ -390,17 +404,19 @@ export default {
 .misi-list {
   text-align: justify;
   list-style-type: decimal;
-  padding-left: 10;
+  padding-left: 20px;
 }
 
 /* Section Styling */
 section {
-  padding: 80px 0;
+  padding: 60px 0;
+  margin-top: 100px; /* Tambahkan margin top agar tidak nabrak navbar */
 }
 
 /* Lokasi and Pendaftaran Sections */
 .section-box {
-  padding: 80px 0;
+  padding: 60px 0;
+  margin-top: 100px; /* Pastikan juga ditambahkan margin pada section ini */
 }
 
 .bagan-organisasi img {
@@ -411,5 +427,58 @@ section {
 }
 .bagan-organisasi .list-group-item:hover {
   background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .typewriter-effect {
+    font-size: 2rem;
+  }
+  .cursor {
+    font-size: 2rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .typewriter-effect {
+    font-size: 1.5rem;
+  }
+  .cursor {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Map container for responsiveness */
+.map-container {
+  position: relative;
+  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 </style>

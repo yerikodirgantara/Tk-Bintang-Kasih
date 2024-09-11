@@ -45,8 +45,13 @@
       </div>
       <div class="form-group">
         <label for="foto">Foto (maksimal 1 MB):</label>
-        <input type="file" id="foto" @change="handleFileUpload" accept="image/*" required>
-        <span v-if="fileError" class="error-message">{{ fileError }}</span>
+        <input type="file" id="foto" @change="handleFileUpload('foto')" accept="image/*" required>
+        <span v-if="fileErrors.foto" class="error-message">{{ fileErrors.foto }}</span>
+      </div>
+      <div class="form-group">
+        <label for="fileKK">Upload File KK (maksimal 1 MB):</label>
+        <input type="file" id="fileKK" @change="handleFileUpload('fileKK')" accept="image/*" required>
+        <span v-if="fileErrors.fileKK" class="error-message">{{ fileErrors.fileKK }}</span>
       </div>
       <div class="form-actions">
         <button type="button" @click="goHome">Kembali</button>
@@ -71,26 +76,30 @@ export default {
         anakKe: '',
         alamatDomisili: '',
         alamatKK: '',
-        foto: null
+        foto: null,
+        fileKK: null
       },
-      fileError: ''
+      fileErrors: {
+        foto: '',
+        fileKK: ''
+      }
     }
   },
   methods: {
-    handleFileUpload(event) {
+    handleFileUpload(field) {
       const file = event.target.files[0];
       if (file) {
         if (file.size > 1 * 1024 * 1024) { // Batas ukuran 1 MB
-          this.fileError = 'Ukuran file tidak boleh lebih dari 1 MB.';
-          this.formData.foto = null;
+          this.fileErrors[field] = `Ukuran file ${field === 'foto' ? 'foto' : 'KK'} tidak boleh lebih dari 1 MB.`;
+          this.formData[field] = null;
         } else {
-          this.fileError = '';
-          this.formData.foto = file;
+          this.fileErrors[field] = '';
+          this.formData[field] = file;
         }
       }
     },
     submitForm() {
-      if (this.fileError) {
+      if (this.fileErrors.foto || this.fileErrors.fileKK) {
         alert('Terdapat kesalahan pada file yang diupload.');
         return;
       }
@@ -111,9 +120,13 @@ export default {
         anakKe: '',
         alamatDomisili: '',
         alamatKK: '',
-        foto: null
+        foto: null,
+        fileKK: null
       };
-      this.fileError = '';
+      this.fileErrors = {
+        foto: '',
+        fileKK: ''
+      };
     },
     goHome() {
       // Mengarahkan pengguna ke halaman home

@@ -19,7 +19,7 @@
       <div class="form-group">
         <label for="agama">Agama:</label>
         <select id="agama" v-model="formData.agama" required>
-          <option disabled value="">Silahkan Pilih salah satu</option>
+          <option value="" >Silahkan Pilih salah satu</option>
           <option>Islam</option>
           <option>Kristen</option>
           <option>Katholik</option>
@@ -39,7 +39,7 @@
       <div class="form-group">
         <label for="pendapatan">Pendapatan:</label>
         <select id="pendapatan" v-model="formData.pendapatan" required>
-          <option disabled value="">Silahkan Pilih Salah Satu</option>
+          <option default value="">Silahkan Pilih Salah Satu</option>
           <option>< Rp 1.000.000</option>
           <option>Rp 1.000.000 - Rp 3.000.000</option>
           <option>Rp 3.000.000 - Rp 5.000.000</option>
@@ -53,7 +53,7 @@
       <div class="form-group">
         <label for="pkhKip">Termasuk dalam Keluarga PKH (Program Keluarga Harapan) / KIP (Kartu Indonesia Pintar):</label>
         <select id="pkhKip" v-model="formData.pkhKip" @change="handlePKHKIPChange" required>
-          <option disabled value="">Silahkan Pilih Salah Satu</option>
+          <option default value="">Silahkan Pilih Salah Satu</option>
           <option>Ya</option>
           <option>Tidak</option>
         </select>
