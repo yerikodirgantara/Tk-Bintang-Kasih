@@ -196,7 +196,7 @@
 </section>
 
     <Footer />
-    <a href="https://wa.me/62822225386373" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6282225386373" class="whatsapp-float" target="_blank">
       <i class="bi bi-whatsapp"></i>
     </a>
 
