@@ -69,7 +69,7 @@
             <div class="card-body">
               <i class="fas fa-users fa-3x mb-3"></i>
               <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
-              <p class="card-text">KB & TK Bintang Kasih menanamkan nilai-nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
+              <p class="card-text">KB & TK Bintang Kasih menanamkan nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
             </div>
           </div>
         </div>
