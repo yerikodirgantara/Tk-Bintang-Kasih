@@ -117,7 +117,7 @@
             timerProgressBar: true,
           }).then((result) => {
             if (result.isConfirmed) {
-              this.$router.push('/Pembayaran'); // Menggunakan routes untuk redirect ke halaman pembayaran
+              routes.push('/Pembayaran'); // Menggunakan routes untuk redirect ke halaman pembayaran
             }
           });
           this.resetForm();
