@@ -130,11 +130,11 @@
     <div class="col-md-6">
       <h4 class="text-center">Kontak Kami</h4>
       <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
-      <ul class="list-unstyled p-3">
+      <ul class="list-unstyled">
         <li><strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang</li>
-        <li><strong>Telepon:</strong> (024) 123-4567</li>
-        <li><strong>Email:</strong> info@bintangkasih.sch.id</li>
-        <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 16.00</li>
+        <li><strong>Telepon:</strong> +62 82225386373</li>
+        <li><strong>Email:</strong> tkbintangkasih.tlogomulyo@gmail.com</li>
+        <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB</li>
       </ul>
     </div>
   </div>
@@ -379,9 +379,9 @@ h2, h5 {
 .card {
   transition: transform 0.3s ease-in-out;
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.205);
-  padding: 20px;
-  border-radius: 10px;
+  box-shadow: 0 4px 8px #7f86d4;
+  padding: 10px;
+  border-radius: 30px;
   height: 100%;
 }
 .card:hover {

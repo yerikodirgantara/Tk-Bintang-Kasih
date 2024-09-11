@@ -80,7 +80,7 @@ export default {
   height: 3px;
   bottom: 0;
   left: -100%;
-  background-color: #7f86d4; /* warna garis */ 
+  background-color: #7f86d4; /* warna garis */
   transition: all 0.4s ease; /* Kecepatan animasi */
 }
 
@@ -96,6 +96,34 @@ body {
   padding-top: 80px; /* Agar konten tidak tertutup oleh navbar */
 }
 
+/* Dropdown item hover effect */
+.dropdown-item {
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: -100%;
+  background-color: #7f86d4; /* warna garis */
+  transition: all 0.4s ease;
+}
+
+.dropdown-item:hover::before {
+  left: 0;
+}
+
+.dropdown-item:hover {
+  color: #a41e1d; /* Ubah warna teks saat disorot */
+}
 
 /* Custom Hamburger Menu Icon */
 .navbar-toggler {

@@ -5,7 +5,8 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Ganti box-shadow dengan warna ungu */
+  box-shadow: 0 0 10px #7f86d4e1; 
 }
 .form-container h1 {
   font-size: 24px;
@@ -52,4 +53,4 @@
 .form-container .form-actions button:last-child {
   background: #1d65a4;
   color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}

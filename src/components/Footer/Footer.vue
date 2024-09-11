@@ -28,13 +28,16 @@ export default {
 footer {
   background-color: #f8f9fa;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem; /* Mengurangi padding */
 }
 
 footer a {
-  font-size: 24px;
+  font-size: 18px; /* Mengurangi ukuran font ikon */
 }
 
 footer p {
   margin-bottom: 0;
+  font-size: 0.875rem; /* Mengurangi ukuran font teks */
 }
+
 </style>
