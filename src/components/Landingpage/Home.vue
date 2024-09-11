@@ -47,42 +47,48 @@
     </div>
   </section>
 
-    <!-- Sejarah Section with Container -->
-    <section id="sejarah" class="my-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Keunggulan TK Bintang Kasih</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="fas fa-school fa-3x mb-3"></i>
-                <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
-                <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. 
-                  KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="fas fa-users fa-3x mb-3"></i>
-                <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
-                <p class="card-text">KB & TK Bintang Kasih berada didekat lingkungan yang memiliki perbedaan suku, agama, budaya, namun tradisi gotong royong dan toleransi antar umat beragama tetap terjaga.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="fas fa-graduation-cap fa-3x mb-3"></i>
-                <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
-                <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas secara intelektual, tetapi juga berbudi pekerti luhur, siap menghadapi tantangan dunia dengan dasar iman yang kuat.</p>
-              </div>
+<!-- Keunggulan Section with Separate Containers -->
+<section id="sejarah" class="my-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Keunggulan TK Bintang Kasih</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body pb-3">
+              <i class="fas fa-school fa-3x mb-3"></i>
+              <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
+              <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="col-md-4">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-users fa-3x mb-3"></i>
+              <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
+              <p class="card-text">KB & TK Bintang Kasih menanamkan nilai-nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+              <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
+              <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Visi Misi Section with Icons -->
   <section id="visi-misi" class="container my-5">
@@ -384,21 +390,75 @@ h2, h5 {
   border-radius: 30px;
   height: 100%;
 }
+
+/* Hover effect */
 .card:hover {
   transform: translateY(-5px);
 }
+
+/* Ikon styling */
 .card i {
   color: #007bff;
 }
+
+/* Card body styling */
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
 }
+
+/* Justify text */
 .text-justify {
   text-align: justify;
 }
+
+/* Media Queries untuk Responsive Design */
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .card {
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(127, 134, 212, 0.5);
+    border-radius: 20px;
+  }
+
+  .card-body {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet Devices (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    padding: 20px;
+    gap: 3;
+    box-shadow: 0 3px 6px rgba(127, 134, 212, 0.6);
+    border-radius: 25px;
+  }
+
+  .card-body {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+
+/* Desktop Devices (min-width: 992px) */
+@media (min-width: 992px) {
+  .card {
+    padding: 25px;
+    box-shadow: 0 4px 8px #7f86d4;
+    border-radius: 30px;
+  }
+
+  .card-body {
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
 
 /* Misi Section Styling */
 .misi-list {
