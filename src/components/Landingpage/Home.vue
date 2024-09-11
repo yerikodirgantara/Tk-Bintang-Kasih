@@ -285,21 +285,22 @@ export default {
       });
     },
     showDaftarKBAlert() {
-      Swal.fire({
-        title: 'Pendaftaran Kelompok Bermain',
-        text: 'Silahkan "Kunjungi Halaman" untuk mendaftar sebagai Siswa Kelompok Bermain (KB) Bintang Kasih.',
-        icon: 'question',
-        confirmButtonText: 'Kunjungi Halaman',
-        showCancelButton: true,
-        cancelButtonText: 'Batal',
-        confirmButtonColor: '#007bff',
-        cancelButtonColor: '#d33',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = '/Formkb';
-        }
-      });
+    Swal.fire({
+      title: 'Pendaftaran Kelompok Bermain',
+      text: 'Silahkan "Kunjungi Halaman" untuk mendaftar sebagai Siswa Kelompok Bermain (KB) Bintang Kasih.',
+      icon: 'question',
+      confirmButtonText: 'Kunjungi Halaman',
+      showCancelButton: true,
+      cancelButtonText: 'Batal',
+      confirmButtonColor: '#007bff',
+      cancelButtonColor: '#d33',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Menggunakan Vue Router untuk redirect
+        this.$router.push('/Formkb');
+      }
+    });
     },
     showDaftarTKAlert() {
       Swal.fire({
@@ -314,7 +315,7 @@ export default {
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = '/Formtk';
+          this.$router.push('/Formkb');
         }
       });
     }
