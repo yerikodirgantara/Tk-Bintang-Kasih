@@ -21,6 +21,7 @@
               Keunggulan
             </a>
             <ul class="dropdown-menu" aria-labelledby="keunggulanDropdown">
+              <li><a class="dropdown-item" href="#keunggulan">Keunggulan KB & TK</a></li>
               <li><a class="dropdown-item" href="#visi-misi">Visi & Misi</a></li>
               <li><a class="dropdown-item" href="#lokasi-sekolah">Lokasi Sekolah</a></li>
             </ul>

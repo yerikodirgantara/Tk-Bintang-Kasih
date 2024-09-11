@@ -46,9 +46,8 @@
       <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
     </div>
   </section>
-
 <!-- Keunggulan Section with Separate Containers -->
-<section id="sejarah" class="my-5">
+<section id="keunggulan" class="my-5">
   <div class="container">
     <h2 class="text-center mb-4">Keunggulan TK Bintang Kasih</h2>
     <div class="row">
@@ -124,28 +123,26 @@
 <section id="lokasi-sekolah" class="container my-5 section-box">
   <h2 class="text-center mb-4">Lokasi Sekolah & Kontak Kami</h2>
   <div class="row justify-content-center">
-    <!-- Kolom Lokasi -->
-    <div class="col-md-6">
-      <h4 class="text-center">Lokasi Sekolah</h4>
-      <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    
-    <!-- Kolom Kontak Kami -->
-    <div class="col-md-6">
-      <h4 class="text-center">Kontak Kami</h4>
-      <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
-      <ul class="list-unstyled">
-        <li><strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang</li>
-        <li><strong>Telepon:</strong> +62 82225386373</li>
-        <li><strong>Email:</strong> tkbintangkasih.tlogomulyo@gmail.com</li>
-        <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB</li>
-      </ul>
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
+          <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h4 class="text-center card-title mt-4 mb-3">Kontak Kami</h4>
+          <p class="mb-3">Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang</li>
+            <li class="mb-2"><strong>Telepon:</strong> <a href="tel:+6282225386373">+62 822 2538 6373</a></li>
+            <li class="mb-2"><strong>Email:</strong> <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com">tkbintangkasih.tlogomulyo@gmail.com</a></li>
+            <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 
     <!-- Organizational Chart Section -->
     <section id="bagan-organisasi" class="container my-5 section-box">
@@ -170,31 +167,39 @@
     </section>
 
     <!-- Pendaftaran Siswa Section -->
-    <section id="pendaftaran" class="container my-5 section-box">
-      <h2 class="text-center mb-4">Pendaftaran Peserta Didik Baru</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Pendaftaran Kelompok Bermain (KB)</h5>
-              <p class="card-text">Pendaftaran untuk anak usia 2-4 tahun.</p>
-              <button @click="showDaftarKBAlert" class="btn btn-primary">Daftar KB</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Pendaftaran Taman Kanak-Kanak (TK)</h5>
-              <p class="card-text">Pendaftaran untuk anak usia 4-6 tahun.</p>
-              <button @click="showDaftarTKAlert" class="btn btn-primary">Daftar TK</button>
-            </div>
+<section id="pendaftaran" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Pendaftaran Peserta Didik Baru</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="container">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Pendaftaran Kelompok Bermain (KB)</h5>
+            <p class="card-text">Pendaftaran untuk anak usia 2-4 tahun.</p>
+            <button @click="showDaftarKBAlert" class="btn btn-primary">Daftar KB</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="col-md-6">
+      <div class="container">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Pendaftaran Taman Kanak-Kanak (TK)</h5>
+            <p class="card-text">Pendaftaran untuk anak usia 4-6 tahun.</p>
+            <button @click="showDaftarTKAlert" class="btn btn-primary">Daftar TK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <Footer />
+    <a href="https://wa.me/62882225386373" class="whatsapp-float" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
   </div>
 </template>
 
@@ -326,9 +331,9 @@ export default {
 /* Hero Section Styling */
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   overflow: hidden;
-  margin-top: 100px; /* Agar tidak nabrak dengan navbar */
+  margin-top: 80px; /* Agar tidak nabrak dengan navbar */
 }
 .carousel-item img {
   width: 100%;
@@ -414,6 +419,7 @@ h2, h5 {
   text-align: justify;
 }
 
+
 /* Media Queries untuk Responsive Design */
 
 /* Mobile Devices (max-width: 767px) */
@@ -434,7 +440,6 @@ h2, h5 {
 @media (min-width: 768px) and (max-width: 991px) {
   .card {
     padding: 20px;
-    gap: 3;
     box-shadow: 0 3px 6px rgba(127, 134, 212, 0.6);
     border-radius: 25px;
   }
@@ -470,13 +475,13 @@ h2, h5 {
 /* Section Styling */
 section {
   padding: 60px 0;
-  margin-top: 100px; /* Tambahkan margin top agar tidak nabrak navbar */
+  margin-top: 55px; /* Tambahkan margin top agar tidak nabrak navbar */
 }
 
 /* Lokasi and Pendaftaran Sections */
 .section-box {
   padding: 60px 0;
-  margin-top: 100px; /* Pastikan juga ditambahkan margin pada section ini */
+  margin-top: 55px; /* Pastikan juga ditambahkan margin pada section ini */
 }
 
 .bagan-organisasi img {
@@ -541,4 +546,47 @@ section {
   width: 100% !important;
   height: 100% !important;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    animation: pulse 1.5s infinite ease-in-out; /* Animasi berdenyut */
+    animation-delay: 3s; /* Setiap 3 detik */
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
 </style>
