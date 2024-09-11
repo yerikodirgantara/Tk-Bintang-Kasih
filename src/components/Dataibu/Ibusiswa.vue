@@ -119,7 +119,7 @@ export default {
           timer: 5000,
           timerProgressBar: true,
           willClose: () => {
-            this.$router.push('/Pembayaran'); // path halaman pembayaran
+            router.push('/Pembayaran'); // path halaman pembayaran
           }
         });
         this.resetForm();
