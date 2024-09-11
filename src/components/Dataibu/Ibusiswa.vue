@@ -118,8 +118,9 @@ export default {
           text: 'Anda akan diarahkan ke halaman pembayaran.',
           timer: 5000,
           timerProgressBar: true,
-          willClose: () => {
-            router.push('/Pembayaran'); // path halaman pembayaran
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.$router.push('/Pembayaran'); // Menggunakan routes untuk redirect ke halaman pembayaran
           }
         });
         this.resetForm();
