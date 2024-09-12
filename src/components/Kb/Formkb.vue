@@ -85,6 +85,13 @@ export default {
       }
     }
   },
+  created() {
+    // Saat komponen di-mount, kita cek apakah ada data form yang disimpan di local storage
+    const savedFormData = localStorage.getItem('formDataKB');
+    if (savedFormData) {
+      this.formData = JSON.parse(savedFormData);
+    }
+  },
   methods: {
     handleFileUpload(field) {
       const file = event.target.files[0];
@@ -103,6 +110,9 @@ export default {
         alert('Terdapat kesalahan pada file yang diupload.');
         return;
       }
+
+      // Simpan formData ke local storage sebelum pindah ke form Ayah
+      localStorage.setItem('formDataKB', JSON.stringify(this.formData));
 
       // Logika untuk mengirim data form
       console.log("Form Data:", this.formData);
@@ -127,6 +137,9 @@ export default {
         foto: '',
         fileKK: ''
       };
+
+      // Hapus data dari local storage juga saat reset form
+      localStorage.removeItem('formDataKB');
     },
     goHome() {
       // Mengarahkan pengguna ke halaman home
@@ -135,6 +148,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 @import './style.css';

@@ -119,8 +119,20 @@
         },
       };
     },
+
+    created() {
+    // Cek apakah ada data form Ayah yang sudah disimpan di localStorage
+    const savedFormData = localStorage.getItem('formDataAyah');
+    if (savedFormData) {
+      this.formData = JSON.parse(savedFormData);
+      }
+    },
+
     methods: {
       handleSubmit() {
+        // Simpan data form Ayah ke localStorage sebelum berpindah ke form Ibu
+      localStorage.setItem('formDataAyah', JSON.stringify(this.formData));
+
         // Logika untuk mengirim data form
         console.log('Form Data:', this.formData);
         

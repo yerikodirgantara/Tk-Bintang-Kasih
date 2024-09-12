@@ -36,15 +36,15 @@
       </div>
 
        <!-- Hero Text Content -->
-       <div class="content">
+      <div class="content">
         <h1 class="hero-title">
         Selamat Datang di <br> 
-        <span class="typewriter-effect">{{ displayedText }}<span class="cursor">|</span></span>
-        Bintang Kasih
-      </h1>
-      <p class="hero-subtitle">Membentuk generasi yang cerdas dan berbudi pekerti</p>
-      <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
-    </div>
+          <span class="typewriter-effect">{{ displayedText }}<span class="cursor">|</span></span>
+          Bintang Kasih
+        </h1>
+        <p class="hero-subtitle">Membentuk generasi yang cerdas dan berbudi pekerti</p>
+        <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
+      </div>
   </section>
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
@@ -55,7 +55,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body pb-3">
-              <i class="fas fa-school fa-3x mb-3"></i>
+              <i class="bi bi-book fa-3x mb-3"></i>
               <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
               <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
             </div>
@@ -66,7 +66,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
-              <i class="fas fa-users fa-3x mb-3"></i>
+              <i class="bi bi-person-arms-up fa-3x mb-3"></i>
               <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
               <p class="card-text">KB & TK Bintang Kasih menanamkan nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
             </div>
@@ -77,7 +77,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
-              <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+              <i class="bi bi-mortarboard  fa-3x mb-3"></i>
               <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
               <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
             </div>
@@ -96,6 +96,7 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center h-100">
                 <div class="card-body d-flex flex-column justify-content-between">
+                    <i class="bi bi-compass fa-3x mb-3"></i>
                     <h5 class="card-title">Visi</h5>
                     <p class="card-text text-justify mt-auto">Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan.
                     Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.</p>
@@ -105,6 +106,7 @@
     <div class="col-md-6 mb-3">
         <div class="card text-center h-100"> <!-- Tambahkan h-100 agar card memiliki tinggi penuh -->
           <div class="card-body">
+            <i class="bi bi-flag fa-3x mb-3"></i>
             <h5 class="card-title">Misi</h5>
             <ol class="misi-list text-left">
               <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
@@ -315,7 +317,7 @@ export default {
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
-          this.$router.push('/Formkb');
+          this.$router.push('/Formtk');
         }
       });
     }
@@ -336,14 +338,18 @@ export default {
   overflow: hidden;
   margin-top: 80px; /* Agar tidak nabrak dengan navbar */
 }
+
+/* Gambar carousel */
 .carousel-item img {
   width: 100%;
   height: 100vh; 
-  object-fit: contain; 
+  object-fit: contain;
+  opacity: 0.8; /* Transparansi gambar, sesuaikan nilai ini (0.1 - 1) */
 }
 h2, h5 {
   color: #7f86d4; /* Warna ungu */
 }
+/* Untuk konten teks di tengah */
 .content {
   z-index: 1;
   position: absolute;
@@ -354,12 +360,29 @@ h2, h5 {
   width: 90%;
   max-width: 600px;
 }
+
+/* Teks judul dengan shadow dan background semi-transparan */
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.196); /* Latar belakang hitam transparan */
+  color: white; /* Teks warna putih agar jelas */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow hitam untuk teks */
 }
+
+/* Subjudul dengan shadow dan background semi-transparan */
 .hero-subtitle {
   font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.203); /* Latar belakang hitam transparan */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow hitam untuk teks */
 }
 /* Typewriter Effect Styling */
 .typewriter-effect {

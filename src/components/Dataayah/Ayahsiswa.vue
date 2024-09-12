@@ -119,16 +119,26 @@ export default {
       },
     };
   },
+  created() {
+    // Cek apakah ada data form Ayah yang sudah disimpan di localStorage
+    const savedFormData = localStorage.getItem('formDataAyah');
+    if (savedFormData) {
+      this.formData = JSON.parse(savedFormData);
+    }
+  },
   methods: {
     handleSubmit() {
+      // Simpan data form Ayah ke localStorage sebelum berpindah ke form Ibu
+      localStorage.setItem('formDataAyah', JSON.stringify(this.formData));
+
       // Logika untuk mengirim data form
-      console.log('Form Data:', this.formData);
-      
-      // Arahkan ke halaman formulir ibu setelah data dikirim
+      console.log('Form Data Ayah:', this.formData);
+
+      // Arahkan ke halaman formulir Ibu setelah data dikirim
       this.$router.push('/Ibusiswa'); // Pastikan Anda menggunakan vue-router dan telah mengonfigurasi route
     },
     handleBack() {
-      // Mengarahkan pengguna ke halaman Formtk
+      // Mengarahkan pengguna ke halaman Formkb (formulir KB)
       this.$router.push('/Formkb'); // Pastikan Anda menggunakan vue-router dan telah mengonfigurasi route
     },
     resetForm() {
@@ -142,10 +152,14 @@ export default {
         pendapatan: '',
         noHp: '',
       };
+
+      // Hapus data dari localStorage saat form di-reset
+      localStorage.removeItem('formDataAyah');
     },
   },
 };
 </script>
+
 
 <style scoped>
 @import './style.css';

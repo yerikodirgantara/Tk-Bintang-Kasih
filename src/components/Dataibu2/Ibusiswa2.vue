@@ -97,8 +97,21 @@
         fileError: ''
       }
     },
+    created() {
+    // Cek apakah ada data form Ayah yang sudah disimpan di localStorage
+    const savedFormData = localStorage.getItem('formDataAyah');
+    if (savedFormData) {
+      this.formData = JSON.parse(savedFormData);
+      }
+    },
     methods: {
       handleSubmit() {
+        // Simpan data form Ibu ke localStorage
+      localStorage.setItem('formDataIbu', JSON.stringify(this.formData));
+
+      // Logika untuk mengirim data form
+      console.log('Form Data Ibu:', this.formData);
+
         if (this.isFormComplete()) {
           if (this.formData.pkhKip === 'Ya' && !this.file) {
             this.fileError = 'Harap unggah bukti PKH/KIP.';
@@ -117,7 +130,7 @@
             timerProgressBar: true,
           }).then((result) => {
             if (result.isConfirmed) {
-              routes.push('/Pembayaran'); // Menggunakan routes untuk redirect ke halaman pembayaran
+              this.$router.push('/Pembayaran'); // Menggunakan routes untuk redirect ke halaman pembayaran
             }
           });
           this.resetForm();
