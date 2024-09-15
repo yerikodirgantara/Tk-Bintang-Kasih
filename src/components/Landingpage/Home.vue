@@ -615,23 +615,26 @@ section {
   height: 100% !important;
 }
 
-@keyframes pulse {
-    0% {
+@keyframes pulse-with-longer-pause {
+    0%, 100% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.1);
     }
-    100% {
+    60% {
+        transform: scale(1.1);
+    }
+    80%, 100% {
         transform: scale(1);
     }
 }
 
 .whatsapp-float {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 60px;
+    width: 46px;
+    height: 46px;
+    bottom: 70px;
     right: 40px;
     background-color: #25d366;
     color: #FFF;
@@ -640,13 +643,15 @@ section {
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
     z-index: 1000;
-    animation: pulse 1.5s infinite ease-in-out; /* Animasi berdenyut */
-    animation-delay: 3s; /* Setiap 3 detik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-with-longer-pause 4s ease-in-out infinite;
 }
 
 .whatsapp-float img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     border-radius: 50%;
 }
 
@@ -655,6 +660,5 @@ section {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
-
 
 </style>

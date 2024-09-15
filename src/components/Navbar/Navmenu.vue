@@ -168,7 +168,7 @@ body {
 
 /* Transform the hamburger to X when the menu is open */
 .navbar-toggler:not(.collapsed) .bar1 {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px); /* Perbaiki nilai translate */
 }
 
 .navbar-toggler:not(.collapsed) .bar2 {
@@ -176,6 +176,6 @@ body {
 }
 
 .navbar-toggler:not(.collapsed) .bar3 {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px); /* Perbaiki nilai translate */
 }
 </style>
