@@ -125,6 +125,9 @@ export default {
     if (savedFormData) {
       this.formData = JSON.parse(savedFormData);
     }
+
+    // Scroll ke atas saat form pertama kali dibuka
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   },
   methods: {
     handleSubmit() {
@@ -155,6 +158,9 @@ export default {
 
       // Hapus data dari localStorage saat form di-reset
       localStorage.removeItem('formDataAyah');
+
+      // Scroll ke atas saat form pertama kali dibuka
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
   },
 };

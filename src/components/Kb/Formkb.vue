@@ -44,12 +44,12 @@
         <input type="text" id="alamatKK" v-model="formData.alamatKK" placeholder="Cth: Jl. Jemur Andayani No.12 Surabaya" required>
       </div>
       <div class="form-group">
-        <label for="foto">Foto Anak Background Merah (Maximum 1 MB):</label>
+        <label for="foto">Foto Anak Background Merah (Maksimal 1 MB):</label>
         <input type="file" id="foto" @change="handleFileUpload('foto')" accept="image/*" required>
         <span v-if="fileErrors.foto" class="error-message">{{ fileErrors.foto }}</span>
       </div>
       <div class="form-group">
-        <label for="fileKK">Upload File Kartu Keluarga (KK) (Maximum 1 MB):</label>
+        <label for="fileKK">Upload File Kartu Keluarga (KK) (Maksimal 1 MB):</label>
         <input type="file" id="fileKK" @change="handleFileUpload('fileKK')" accept="image/*" required>
         <span v-if="fileErrors.fileKK" class="error-message">{{ fileErrors.fileKK }}</span>
       </div>
@@ -91,6 +91,9 @@ export default {
     if (savedFormData) {
       this.formData = JSON.parse(savedFormData);
     }
+
+    // Scroll ke atas saat form pertama kali dibuka
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   },
   methods: {
     handleFileUpload(field) {
@@ -140,6 +143,9 @@ export default {
 
       // Hapus data dari local storage juga saat reset form
       localStorage.removeItem('formDataKB');
+
+      // Scroll ke bagian atas setelah reset form
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     goHome() {
       // Mengarahkan pengguna ke halaman home

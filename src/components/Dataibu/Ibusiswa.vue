@@ -40,10 +40,10 @@
         <label for="pendapatan">Pendapatan:</label>
         <select id="pendapatan" v-model="formData.pendapatan" required>
           <option default value="">Silahkan Pilih Salah Satu</option>
-          <option>< Rp 1.000.000</option>
-          <option>Rp 1.000.000 - Rp 3.000.000</option>
-          <option>Rp 3.000.000 - Rp 5.000.000</option>
-          <option>> Rp 5.000.000</option>
+          <option>< Rp 1 Juta</option>
+          <option>Rp 1 Juta - Rp 3 Juta</option>
+          <option>Rp 3 Juta - Rp 5 Juta</option>
+          <option>> Rp 5 Juta</option>
         </select>
       </div>
       <div class="form-group">
@@ -107,6 +107,9 @@ export default {
     const savedFormData = localStorage.getItem('formDataAyah');
     if (savedFormData) {
       this.formData = JSON.parse(savedFormData);
+
+      // Scroll ke atas saat form pertama kali dibuka
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   },
     
@@ -166,6 +169,9 @@ export default {
       this.formData = this.getDefaultFormData();
       this.file = null;
       this.fileError = '';
+
+      // Scroll ke atas saat form pertama kali dibuka
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     goBack() {
       this.$router.push('/Ayahsiswa'); // Mengarahkan ke path formulir ayah
