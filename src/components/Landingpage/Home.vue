@@ -55,7 +55,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body pb-3">
-              <i class="bi bi-book fa-3x mb-3"></i>
+              <i class="bi bi-book fa-2x mb-3"></i>
               <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
               <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
             </div>
@@ -66,7 +66,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
-              <i class="bi bi-person-arms-up fa-3x mb-3"></i>
+              <i class="bi bi-person-arms-up fa-2x mb-3"></i>
               <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
               <p class="card-text">KB & TK Bintang Kasih menanamkan nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
             </div>
@@ -77,7 +77,7 @@
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
-              <i class="bi bi-mortarboard  fa-3x mb-3"></i>
+              <i class="bi bi-mortarboard  fa-2x mb-3"></i>
               <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
               <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
             </div>
@@ -96,7 +96,7 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center h-100">
                 <div class="card-body d-flex flex-column justify-content-between">
-                    <i class="bi bi-compass fa-3x mb-3"></i>
+                    <i class="bi bi-compass fa-2x mb-3"></i>
                     <h5 class="card-title">Visi</h5>
                     <p class="card-text text-justify mt-auto">Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan.
                     Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.</p>
@@ -106,7 +106,7 @@
     <div class="col-md-6 mb-3">
         <div class="card text-center h-100"> <!-- Tambahkan h-100 agar card memiliki tinggi penuh -->
           <div class="card-body">
-            <i class="bi bi-flag fa-3x mb-3"></i>
+            <i class="bi bi-flag fa-2x mb-3 "></i>
             <h5 class="card-title">Misi</h5>
             <ol class="misi-list text-left">
               <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
@@ -126,47 +126,86 @@
   <h2 class="text-center mb-4">Lokasi Sekolah & Kontak Kami</h2>
   <div class="row justify-content-center">
     <div class="col-md-12">
+      <!-- Card Besar -->
       <div class="card">
         <div class="card-body">
-          <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
-          <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <h4 class="text-center card-title mt-4 mb-3">Kontak Kami</h4>
-          <p class="mb-3">Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang</li>
-            <li class="mb-2"><strong>Telepon:</strong> <a href="tel:+6282225386373">+62 822 2538 6373</a></li>
-            <li class="mb-2"><strong>Email:</strong> <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com">tkbintangkasih.tlogomulyo@gmail.com</a></li>
-            <li><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB</li>
-          </ul>
+          <div class="row">
+            <!-- Card Lokasi Sekolah (Kiri) -->
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
+                  <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- Card Kontak Kami (Kanan) -->
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center card-title mb-4">Kontak Kami</h4>
+                  <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-phone"></i> <strong>Telepon:</strong> <a href="tel:+6282225386373">+62 822 2538 6373</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com">tkbintangkasih.tlogomulyo@gmail.com</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+
+
     <!-- Organizational Chart Section -->
-    <section id="bagan-organisasi" class="container my-5 section-box">
-      <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
-      <div id="app">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <ul class="list-group">
-              <li v-for="person in organization" :key="person.id" class="list-group-item">
-                <div class="d-flex align-items-center">
-                  <img :src="person.photo" alt="Photo" class="rounded-circle mr-3" width="50" height="50">
-                  <div>
-                    <h5>{{ person.name }}</h5>
-                    <p>{{ person.role }}</p>
-                  </div>
+<section id="bagan-organisasi" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
+  <div id="app">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Carousel -->
+        <div id="carouselGuru" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]">
+              <div class="card">
+                <div class="card-body text-center">
+                  <img :src="person.photo" alt="Photo" class="rounded-circle mb-3" width="100" height="100">
+                  <h5 class="card-title">{{ person.name }}</h5>
+                  <p class="card-text">{{ person.role }}</p>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
+          <!-- Controls -->
+          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Pendaftaran Siswa Section -->
 <section id="pendaftaran" class="container my-5 section-box">
@@ -206,6 +245,7 @@
 </template>
 
 <script>
+import axios from 'axios'; // Pastikan axios diinstal melalui npm atau yarn
 import Swal from 'sweetalert2';
 import Footer from '../Footer/Footer.vue';
 import Navmenu from '../Navbar/Navmenu.vue';
@@ -215,14 +255,9 @@ export default {
     Navmenu,
     Footer,
   },
-  name: "HomePage",
   data() {
     return {
-      organization: [
-        { id: 1, name: 'Guru A', role: 'Guru KB', photo: 'path/to/photoA.jpg' },
-        { id: 2, name: 'Guru B', role: 'Guru TK', photo: 'path/to/photoB.jpg' }
-        // Tambahkan data guru lainnya di sini
-      ],
+      organization: [], // Empty array initially
       texts: ['KB', 'TK'],
       currentTextIndex: 0,
       displayedText: '',
@@ -235,6 +270,16 @@ export default {
       pauseTimeoutId: null,
       isErasing: false
     };
+  },
+  mounted() {
+    // Fetch data from API when the component is mounted
+    axios.get('https://api.example.com/teachers')
+      .then(response => {
+        this.organization = response.data;  // Set the organization data
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
   },
   mounted() {
     this.startTypewriterEffect();
@@ -488,7 +533,6 @@ h2, h5 {
   }
 }
 
-
 /* Misi Section Styling */
 .misi-list {
   text-align: justify;
@@ -587,7 +631,7 @@ section {
     position: fixed;
     width: 50px;
     height: 50px;
-    bottom: 10px;
+    bottom: 60px;
     right: 40px;
     background-color: #25d366;
     color: #FFF;

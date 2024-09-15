@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="#">
         <img src="../../assets/logo.jpg" alt="TK Bintang Kasih" class="d-inline-block align-top" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-icon">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -153,33 +153,20 @@ body {
   position: relative;
 }
 
-.bar1, .bar2, .bar3 {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Bubble effect on click */
-.navbar-toggler:focus .bar,
-.navbar-toggler:active .bar {
-  background-color: #7f86d4; /* Warna saat diklik */
-  animation: bubble 0.6s ease-out;
-}
-
-@keyframes bubble {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 /* Hamburger menu icon transform on click */
+.navbar-toggler.collapsed .bar1 {
+  transform: rotate(0deg) translate(0, 0);
+}
+
+.navbar-toggler.collapsed .bar2 {
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bar3 {
+  transform: rotate(0deg) translate(0, 0);
+}
+
+/* Transform the hamburger to X when the menu is open */
 .navbar-toggler:not(.collapsed) .bar1 {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -189,6 +176,6 @@ body {
 }
 
 .navbar-toggler:not(.collapsed) .bar3 {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 </style>
