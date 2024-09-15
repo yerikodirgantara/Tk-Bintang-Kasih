@@ -7,22 +7,22 @@
       <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/gambar_5.jpg" class="d-block w-100" alt="First slide">
+            <img src="../../assets/gambar_5.jpg" class="d-block w-100 shadow-lg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_6.jpg" class="d-block w-100" alt="Second slide">
+            <img src="../../assets/gambar_6.jpg" class="d-block w-100 shadow-lg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_7.jpg" class="d-block w-100" alt="Third slide">
+            <img src="../../assets/gambar_7.jpg" class="d-block w-100 shadow-lg" alt="Third slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_2.jpg" class="d-block w-100" alt="Fourth slide">
+            <img src="../../assets/gambar_2.jpg" class="d-block w-100 shadow-lg" alt="Fourth slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_3.jpg" class="d-block w-100" alt="Fifth slide">
+            <img src="../../assets/gambar_3.jpg" class="d-block w-100 shadow-lg" alt="Fifth slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_4.jpg" class="d-block w-100" alt="Sixth slide">
+            <img src="../../assets/gambar_4.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -390,6 +390,7 @@ export default {
   height: 100vh; 
   object-fit: contain;
   opacity: 0.8; /* Transparansi gambar, sesuaikan nilai ini (0.1 - 1) */
+  box-shadow: 0 4px 8px #7f86d4;
 }
 h2, h5 {
   color: #7f86d4; /* Warna ungu */
@@ -410,24 +411,24 @@ h2, h5 {
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.196); /* Latar belakang hitam transparan */
+  background-color: rgba(0, 0, 0, 0.014); /* Latar belakang hitam transparan */
   color: white; /* Teks warna putih agar jelas */
   padding: 10px;
   border-radius: 5px;
   display: inline-block;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow hitam untuk teks */
+  text-shadow: 0 4px 8px #7f86d4 /* Shadow ungu teks */
 }
 
 /* Subjudul dengan shadow dan background semi-transparan */
 .hero-subtitle {
   font-size: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.203); /* Latar belakang hitam transparan */
+  background-color: rgba(0, 0, 0, 0.014); /* Latar belakang hitam transparan */
   color: white;
   padding: 10px;
   border-radius: 5px;
   display: inline-block;
   margin-top: 10px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow hitam untuk teks */
+  text-shadow: 0 4px 8px #7f86d4 /* Shadow ungu teks */
 }
 /* Typewriter Effect Styling */
 .typewriter-effect {
