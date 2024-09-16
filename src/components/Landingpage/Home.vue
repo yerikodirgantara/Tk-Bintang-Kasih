@@ -96,7 +96,7 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center h-100">
                 <div class="card-body d-flex flex-column justify-content-between">
-                    <i class="bi bi-compass fa-2x mb-3"></i>
+                  <i class="fa fa-compass fa-2x mb-3"></i>
                     <h5 class="card-title">Visi</h5>
                     <p class="card-text text-justify mt-auto">Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan.
                     Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.</p>
@@ -106,7 +106,7 @@
     <div class="col-md-6 mb-3">
         <div class="card text-center h-100"> <!-- Tambahkan h-100 agar card memiliki tinggi penuh -->
           <div class="card-body">
-            <i class="bi bi-flag fa-2x mb-3 "></i>
+            <i class="fa fa-rocket fa-2x mb-3"></i>
             <h5 class="card-title">Misi</h5>
             <ol class="misi-list text-left">
               <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
@@ -217,7 +217,7 @@
           <div class="card-body">
             <h5 class="card-title">Pendaftaran Kelompok Bermain (KB)</h5>
             <p class="card-text">Pendaftaran untuk anak usia 2-4 tahun.</p>
-            <button @click="showDaftarKBAlert" class="btn btn-primary">Daftar KB</button>
+            <button @click="showDaftarKBAlert" class="btn btn-primary custom-btn">Daftar KB</button>
           </div>
         </div>
       </div>
@@ -228,7 +228,7 @@
           <div class="card-body">
             <h5 class="card-title">Pendaftaran Taman Kanak-Kanak (TK)</h5>
             <p class="card-text">Pendaftaran untuk anak usia 4-6 tahun.</p>
-            <button @click="showDaftarTKAlert" class="btn btn-primary">Daftar TK</button>
+            <button @click="showDaftarTKAlert" class="btn btn-primary custom-btn">Daftar TK</button>
           </div>
         </div>
       </div>
@@ -661,5 +661,14 @@ section {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
+.custom-btn {
+    background-color: #1a82de;
+    border-color: #1a82de;
+  }
+  .custom-btn:hover {
+    background-color: #1d65a4;
+    border-color: #1d65a4;
+  }
 
 </style>
