@@ -12,8 +12,20 @@
         <input type="text" id="namaPanggilan" v-model="formData.namaPanggilan" placeholder="Cth: Naomi" required>
       </div>
       <div class="form-group">
-        <label for="tempatTanggalLahir">Tempat, Tanggal Lahir:</label>
-        <input type="text" id="tempatTanggalLahir" v-model="formData.tempatTanggalLahir" placeholder="Cth: Surabaya, 17 Desember 2017" required>
+        <label for="tempatLahir">Tempat Lahir:</label>
+        <input type="text" id="tempatLahir" v-model="formData.tempatLahir" placeholder="Cth: Surabaya" required>
+      </div>
+      <div class="form-group">
+        <label for="tanggalLahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggalLahir" v-model="formData.tanggalLahir" required>
+      </div>
+      <div class="form-group">
+        <label for="jenisKelamin">Jenis Kelamin:</label>
+        <select id="jenisKelamin" v-model="formData.jenisKelamin" required>
+          <option disabled value="">Silahkan Pilih</option>
+          <option>Laki-laki</option>
+          <option>Perempuan</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="nik">NIK (Nomor Induk Kependudukan):</label>
@@ -70,7 +82,9 @@ export default {
       formData: {
         namaLengkap: '',
         namaPanggilan: '',
-        tempatTanggalLahir: '',
+        tempatLahir: '',
+        tanggalLahir: '',
+        jenisKelamin: '',
         nik: '',
         agama: '',
         anakKe: '',
@@ -127,7 +141,9 @@ export default {
       this.formData = {
         namaLengkap: '',
         namaPanggilan: '',
-        tempatTanggalLahir: '',
+        tempatLahir: '',
+        tanggalLahir: '',
+        jenisKelamin: '',
         nik: '',
         agama: '',
         anakKe: '',

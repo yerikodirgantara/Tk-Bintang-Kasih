@@ -16,6 +16,27 @@
       </div>
 
       <div class="form-group">
+        <label for="tempatLahir">Tempat Lahir:</label>
+        <input
+          v-model="formData.tempatLahir"
+          type="text"
+          id="tempatLahir"
+          placeholder="Cth: Semarang"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tanggalLahir">Tanggal Lahir:</label>
+        <input
+          v-model="formData.tanggalLahir"
+          type="date"
+          id="tanggalLahir"
+          required
+        />
+      </div>
+
+      <div class="form-group">
         <label for="nik">NIK (Nomor Induk Kependudukan):</label>
         <input
           v-model="formData.nik"
@@ -77,9 +98,9 @@
         <select v-model="formData.pendapatan" id="pendapatan" required>
           <option value="" disabled>Pilih Salah Satu</option>
           <option value="< 1 Juta">Kurang dari 1 Juta</option>
-          <option value="1 - 3 Juta">1 - 3 Juta</option>
-          <option value="3 - 5 Juta">3 - 5 Juta</option>
-          <option value="> 5 Juta">Lebih dari 5 Juta</option>
+          <option value="1 - 3 Juta">Rp 1 Juta - Rp 3 Juta</option>
+          <option value="3 - 5 Juta">Rp 3 Juta - Rp 5 Juta</option>
+          <option value="> 5 Juta">Lebih dari Rp 5 Juta</option>
         </select>
       </div>
 
@@ -109,6 +130,8 @@ export default {
     return {
       formData: {
         namaAyah: '',
+        tempatLahir: '',
+        tanggalLahir: '',
         nik: '',
         alamat: '',
         agama: '',
@@ -147,6 +170,8 @@ export default {
     resetForm() {
       this.formData = {
         namaAyah: '',
+        tempatLahir: '',
+        tanggalLahir: '',
         nik: '',
         alamat: '',
         agama: '',

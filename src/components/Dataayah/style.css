@@ -24,15 +24,24 @@ label {
 }
 
 input[type=text],
-select {
+select,
+input[type=date] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+/* Tambahkan gaya untuk input date */
+input[type=date] {
+  font-family: inherit; /* Sesuaikan dengan font default */
+  color: #333;
+  background-color: #fff;
+}
+
 input[type=text]:focus,
-select:focus {
+select:focus,
+input[type=date]:focus {
   border-color: #007bff;
 }
 
@@ -72,4 +81,4 @@ select:focus {
     width: 100%;
     margin-bottom: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

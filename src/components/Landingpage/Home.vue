@@ -49,7 +49,7 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4">Keunggulan TK Bintang Kasih</h2>
+    <h2 class="text-center mb-4">About TK Bintang Kasih</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="container">
@@ -473,7 +473,7 @@ h2, h5 {
 
 /* Ikon styling */
 .card i {
-  color: #007bff;
+  color: #7c82c0;
 }
 
 /* Card body styling */
@@ -496,7 +496,7 @@ h2, h5 {
 @media (max-width: 767px) {
   .card {
     padding: 15px;
-    box-shadow: 0 2px 4px rgba(127, 134, 212, 0.5);
+    box-shadow: 0 2px 4px rgba(127, 134, 212, 0.652);
     border-radius: 20px;
   }
 

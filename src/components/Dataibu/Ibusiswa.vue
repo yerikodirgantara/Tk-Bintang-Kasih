@@ -9,6 +9,14 @@
         <input type="text" id="namaIbu" v-model="formData.namaIbu" placeholder="Cth: Maria Suryaningsih" required>
       </div>
       <div class="form-group">
+        <label for="tempatLahir">Tempat Lahir:</label>
+        <input type="text" id="tempatLahir" v-model="formData.tempatLahir" placeholder="Cth: Semarang" required>
+      </div>
+      <div class="form-group">
+        <label for="tanggalLahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggalLahir" v-model="formData.tanggalLahir" required>
+      </div>
+      <div class="form-group">
         <label for="nik">NIK:</label>
         <input type="text" id="nik" v-model="formData.nik" placeholder="Cth: 357081712170002" required>
       </div>
@@ -40,10 +48,10 @@
         <label for="pendapatan">Pendapatan:</label>
         <select id="pendapatan" v-model="formData.pendapatan" required>
           <option default value="">Silahkan Pilih Salah Satu</option>
-          <option>< Rp 1 Juta</option>
-          <option>Rp 1 Juta - Rp 3 Juta</option>
+          <option>Kurang dari Rp 1 Juta</option>
+          <option>Rp 1 - Rp 3 Juta</option>
           <option>Rp 3 Juta - Rp 5 Juta</option>
-          <option>> Rp 5 Juta</option>
+          <option>Lebih dari Rp 5 Juta</option>
         </select>
       </div>
       <div class="form-group">
@@ -112,6 +120,7 @@ export default {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   },
+    
     
     handleSubmit() {
       // Simpan data form Ibu ke localStorage
