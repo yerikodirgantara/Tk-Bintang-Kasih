@@ -25,9 +25,6 @@
             <img src="../../assets/gambar_9.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_10.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
-          </div>
-          <div class="carousel-item">
             <img src="../../assets/gambar_11.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
           </div>
         </div>
