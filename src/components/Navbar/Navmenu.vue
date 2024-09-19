@@ -34,9 +34,10 @@
               Akun
             </a>
             <ul class="dropdown-menu" aria-labelledby="authDropdown">
-              <li><a class="dropdown-item" href="/Loguser">Login</a></li>
-              <li><a class="dropdown-item" href="/Reguser">Daftar</a></li>
+              <li><router-link class="dropdown-item" to="/Loguser">Login</router-link></li>
+              <li><router-link class="dropdown-item" to="/Reguser">Daftar</router-link></li>
             </ul>
+
           </li>
         </ul>
       </div>
