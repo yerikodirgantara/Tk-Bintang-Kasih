@@ -49,7 +49,7 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4">About TK Bintang Kasih</h2>
+    <h2 class="text-center mb-4">About KB & TK Bintang Kasih</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="container">
@@ -201,35 +201,6 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Pendaftaran Siswa Section -->
-<section id="pendaftaran" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Pendaftaran Peserta Didik Baru</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="container">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Pendaftaran Kelompok Bermain (KB)</h5>
-            <p class="card-text">Pendaftaran untuk anak usia 2-4 tahun.</p>
-            <button @click="showDaftarKBAlert" class="btn btn-primary custom-btn">Daftar KB</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="container">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Pendaftaran Taman Kanak-Kanak (TK)</h5>
-            <p class="card-text">Pendaftaran untuk anak usia 4-6 tahun.</p>
-            <button @click="showDaftarTKAlert" class="btn btn-primary custom-btn">Daftar TK</button>
-          </div>
         </div>
       </div>
     </div>

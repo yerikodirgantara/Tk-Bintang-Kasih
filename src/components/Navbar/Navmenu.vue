@@ -24,15 +24,18 @@
               <li><a class="dropdown-item" href="#keunggulan">About KB & TK</a></li>
               <li><a class="dropdown-item" href="#visi-misi">Visi & Misi</a></li>
               <li><a class="dropdown-item" href="#lokasi-sekolah">Lokasi Sekolah</a></li>
+              <!-- Memasukkan Daftar Guru dalam dropdown About -->
+              <li><a class="dropdown-item" href="#bagan-organisasi">Daftar Guru</a></li>
             </ul>
           </li>
+          <!-- Tambahan Dropdown Login dan Daftar -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="guruDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Daftar
+            <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Akun
             </a>
-            <ul class="dropdown-menu" aria-labelledby="guruDropdown">
-              <li><a class="dropdown-item" href="#bagan-organisasi">Daftar Guru</a></li>
-              <li><a class="dropdown-item" href="#pendaftaran">Daftar Siswa</a></li>
+            <ul class="dropdown-menu" aria-labelledby="authDropdown">
+              <li><a class="dropdown-item" href="/Loguser">Login</a></li>
+              <li><a class="dropdown-item" href="/Reguser">Daftar</a></li>
             </ul>
           </li>
         </ul>
