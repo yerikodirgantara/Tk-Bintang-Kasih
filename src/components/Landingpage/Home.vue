@@ -19,10 +19,16 @@
             <img src="../../assets/gambar_2.jpg" class="d-block w-100 shadow-lg" alt="Fourth slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_3.jpg" class="d-block w-100 shadow-lg" alt="Fifth slide">
+            <img src="../../assets/gambar_1.jpg" class="d-block w-100 shadow-lg" alt="Fifth slide">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/gambar_4.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+            <img src="../../assets/gambar_9.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_10.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_11.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">

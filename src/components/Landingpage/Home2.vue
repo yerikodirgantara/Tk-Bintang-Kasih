@@ -7,23 +7,29 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../../assets/gambar_5.jpg" class="d-block w-100 shadow-lg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/gambar_6.jpg" class="d-block w-100 shadow-lg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/gambar_7.jpg" class="d-block w-100 shadow-lg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/gambar_2.jpg" class="d-block w-100 shadow-lg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/gambar_3.jpg" class="d-block w-100 shadow-lg" alt="Fifth slide">
-            </div>
-            <div class="carousel-item">
-              <img src="../../assets/gambar_4.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
-            </div>
+            <img src="../../assets/gambar_5.jpg" class="d-block w-100 shadow-lg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_6.jpg" class="d-block w-100 shadow-lg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_7.jpg" class="d-block w-100 shadow-lg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_2.jpg" class="d-block w-100 shadow-lg" alt="Fourth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_1.jpg" class="d-block w-100 shadow-lg" alt="Fifth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_9.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_10.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/gambar_11.jpg" class="d-block w-100 shadow-lg" alt="Sixth slide">
+          </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
