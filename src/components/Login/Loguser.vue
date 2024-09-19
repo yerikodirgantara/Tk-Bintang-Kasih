@@ -24,6 +24,12 @@
           />
         </div>
         <button type="submit" class="login-button">Login</button>
+
+        <!-- Link to Login -->
+          <div class="login-link-container">
+            <span>Belum punya akun? Silahkan Daftar </span>
+            <router-link to="/Reguser" class="login-link"> disini</router-link>
+          </div>
       </form>
   
       <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
@@ -157,4 +163,18 @@ export default {
     font-size: 14px;
   }
 }
+
+.login-link-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .login-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
 </style>
