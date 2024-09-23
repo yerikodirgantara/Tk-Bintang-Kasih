@@ -4,7 +4,7 @@
       <h1 class="login-title">Login</h1>
       <form @submit.prevent="loginUser">
         <div class="form-group">
-          <label for="username">Username:</label>
+          <label for="username">NIK (Nomor Induk Kependudukan):</label>
           <input
             type="text"
             id="username"

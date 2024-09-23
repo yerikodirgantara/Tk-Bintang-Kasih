@@ -5,7 +5,7 @@
         <form @submit.prevent="registerUser">
           <!-- Username -->
           <div class="form-group" :class="{ 'has-error': usernameError }">
-            <label for="username">Nama Pengguna:</label>
+            <label for="username">NIK (Nomor Induk Kependudukan):</label>
             <input
               type="text"
               id="username"

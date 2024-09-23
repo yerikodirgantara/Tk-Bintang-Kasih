@@ -177,67 +177,57 @@
   
   
       <!-- Organizational Chart Section -->
-  <section id="bagan-organisasi" class="container my-5 section-box">
-    <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
-    <div id="app">
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <!-- Carousel -->
-          <div id="carouselGuru" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]">
-                <div class="card">
-                  <div class="card-body text-center">
-                    <img :src="person.photo" alt="Photo" class="rounded-circle mb-3" width="100" height="100">
-                    <h5 class="card-title">{{ person.name }}</h5>
-                    <p class="card-text">{{ person.role }}</p>
-                  </div>
+<section id="bagan-organisasi" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
+  <div id="app">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Carousel -->
+        <div id="carouselGuru" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]">
+              <div class="card"> <!-- Tambahkan card di sini -->
+                <div class="card-body text-center">
+                  <img :src="person.photo" alt="Photo" class="rounded-circle mb-3" width="100" height="100">
+                  <h5 class="card-title">{{ person.name }}</h5>
+                  <p class="card-text">{{ person.role }}</p>
                 </div>
               </div>
             </div>
-            <!-- Controls -->
-            <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
+          <!-- Controls -->
+          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   
-      <!-- Pendaftaran Siswa Section -->
-  <section id="pendaftaran" class="container my-5 section-box">
-    <h2 class="text-center mb-4">Pendaftaran Peserta Didik Baru</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="container">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Pendaftaran Kelompok Bermain (KB)</h5>
-              <p class="card-text">Pendaftaran untuk anak usia 2-4 tahun.</p>
-              <button @click="showDaftarKBAlert" class="btn btn-primary custom-btn">Daftar KB</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="container">
-          <div class="card text-center">
-            <div class="card-body">
-              <h5 class="card-title">Pendaftaran Taman Kanak-Kanak (TK)</h5>
-              <p class="card-text">Pendaftaran untuk anak usia 4-6 tahun.</p>
-              <button @click="showDaftarTKAlert" class="btn btn-primary custom-btn">Daftar TK</button>
-            </div>
-          </div>
+  <!-- Pendaftaran Siswa Section -->
+<section id="pendaftaran" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Penerimaan Murid Baru</h2>
+  <div class="row justify-content-center"> 
+    <div class="col-md-6"> 
+      <div class="card"> <!-- Tambahkan card di sini -->
+        <div class="card-body text-center">
+          <i class="fas fa-book-open fa-4x mb-3"></i> 
+          <h3>Pendaftaran Murid KB & TK Bintang Kasih</h3>
+          <p>Pendaftaran peserta didik baru.</p>
+          <button @click="showDaftarAlert" class="btn btn-primary custom-btn">Daftar Sekarang</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   
       <Footer />
       <a href="https://wa.me/6282225386373" class="whatsapp-float" target="_blank">
@@ -334,7 +324,7 @@
           confirmButtonText: 'Tutup'
         });
       },
-      showDaftarKBAlert() {
+      showDaftarAlert() {
       Swal.fire({
         title: 'Pendaftaran Kelompok Bermain',
         text: 'Silahkan "Kunjungi Halaman" untuk mendaftar sebagai Siswa Kelompok Bermain (KB) Bintang Kasih.',
@@ -351,32 +341,13 @@
           this.$router.push('/Formkb');
         }
       });
-      },
-      showDaftarTKAlert() {
-        Swal.fire({
-          title: 'Pendaftaran Taman Kanak-Kanak',
-          text: 'Silahkan klik "Kunjungi Halaman" untuk mendaftar sebagai Siswa Taman Kanak-Kanak (TK) Bintang Kasih.',
-          icon: 'question',
-          confirmButtonText: 'Kunjungi Halaman',
-          showCancelButton: true,
-          cancelButtonText: 'Batal',
-          confirmButtonColor: '#007bff',
-          cancelButtonColor: '#d33',
-          reverseButtons: true
-        }).then((result) => {
-          if (result.isConfirmed) {
-            this.$router.push('/Formtk');
-          }
-        });
       }
     },
     beforeDestroy() {
       this.stopTypewriterEffect();
     }
   };
-  </script>
-  
-  
+</script>
   
   <style scoped>
   /* Hero Section Styling */
