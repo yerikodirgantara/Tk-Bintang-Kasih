@@ -327,7 +327,7 @@
       showDaftarAlert() {
       Swal.fire({
         title: 'Pendaftaran Kelompok Bermain',
-        text: 'Silahkan "Kunjungi Halaman" untuk mendaftar sebagai Siswa Kelompok Bermain (KB) Bintang Kasih.',
+        text: 'Silahkan "Kunjungi Halaman" untuk mengisi formulir pendaftaran sebagai Siswa KB & TK Bintang Kasih.',
         icon: 'question',
         confirmButtonText: 'Kunjungi Halaman',
         showCancelButton: true,
@@ -338,7 +338,7 @@
       }).then((result) => {
         if (result.isConfirmed) {
           // Menggunakan Vue Router untuk redirect
-          this.$router.push('/Formkb');
+          this.$router.push('/Formulir');
         }
       });
       }

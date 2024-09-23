@@ -4,8 +4,9 @@
       <h2>Formulir Pendaftaran Murid Baru KB dan TK Bintang Kasih</h2>
       <p>Silahkan Isi Form Sesuai Ketentuan Sebagai Berikut:</p>
 
-      <div class="section">
-        <h3>Data Anak</h3>
+      <!-- Card for Data Anak -->
+      <div class="card">
+        <h3><span class="highlight">Data</span> Anak</h3>
         <div class="form-group-horizontal">
           <label for="opsiPendaftaran">Pendaftaran Untuk:</label>
           <select id="opsiPendaftaran" v-model="formData.opsiPendaftaran" required>
@@ -42,7 +43,6 @@
           <label for="alamatAnak">Alamat:</label>
           <input type="text" id="alamatAnak" v-model="formData.alamatAnak" placeholder="Cth: Jl. Gusti Putri 2 No. 10 Semarang" required />
         </div>
-        
         <div class="form-group-horizontal">
           <label for="agamaAnak">Agama:</label>
           <select id="agamaAnak" v-model="formData.agamaAnak" required>
@@ -57,117 +57,121 @@
         </div>
       </div>
 
-    <div class="section">
-      <h3>Data Ayah</h3>
-      <div class="form-group-horizontal">
-        <label for="namaAyah">Nama Ayah:</label>
-        <input type="text" id="namaAyah" v-model="formData.namaAyah" placeholder="Cth: Yohanes Budi Prakoso" required />
+      <!-- Card for Data Ayah -->
+      <div class="card">
+        <h3><span class="highlight">Data</span> Ayah</h3>
+        <div class="form-group-horizontal">
+          <label for="namaAyah">Nama Ayah:</label>
+          <input type="text" id="namaAyah" v-model="formData.namaAyah" placeholder="Cth: Yohanes Budi Prakoso" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="tempatLahirAyah">Tempat Lahir:</label>
+          <input type="text" id="tempatLahirAyah" v-model="formData.tempatLahirAyah" placeholder="Cth: Semarang" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="tanggalLahirAyah">Tanggal Lahir:</label>
+          <input type="date" id="tanggalLahirAyah" v-model="formData.tanggalLahirAyah" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="nikAyah">NIK:</label>
+          <input type="text" id="nikAyah" v-model="formData.nikAyah" placeholder="Cth: 357081712170001" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="alamatAyah">Alamat:</label>
+          <input type="text" id="alamatAyah" v-model="formData.alamatAyah" placeholder="Cth: Jl. Gusti Putri 2 No. 10 Semarang" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="agamaAyah">Agama:</label>
+          <select id="agamaAyah" v-model="formData.agamaAyah" required>
+            <option value="">Pilih Salah Satu</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+        </div>
+        <div class="form-group-horizontal">
+          <label for="pekerjaanAyah">Pekerjaan:</label>
+          <input type="text" id="pekerjaanAyah" v-model="formData.pekerjaanAyah" placeholder="Cth: Pegawai Negeri" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="noTelpAyah">No. Telepon WA:</label>
+          <input type="text" id="noTelpAyah" v-model="formData.noTelpAyah" placeholder="Cth: 081234567890" required />
+        </div>
       </div>
-      <div class="form-group-horizontal">
-        <label for="tempatLahirAyah">Tempat Lahir:</label>
-        <input type="text" id="tempatLahirAyah" v-model="formData.tempatLahirAyah" placeholder="Cth: Semarang" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="tanggalLahirAyah">Tanggal Lahir:</label>
-        <input type="date" id="tanggalLahirAyah" v-model="formData.tanggalLahirAyah" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="nikAyah">NIK:</label>
-        <input type="text" id="nikAyah" v-model="formData.nikAyah" placeholder="Cth: 357081712170001" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="alamatAyah">Alamat:</label>
-        <input type="text" id="alamatAyah" v-model="formData.alamatAyah" placeholder="Cth: Jl. Gusti Putri 2 No. 10 Semarang" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="agamaAyah">Agama:</label>
-        <select id="agamaAyah" v-model="formData.agamaAyah" required>
-          <option value="">Pilih Salah Satu</option>
-          <option value="Islam">Islam</option>
-          <option value="Kristen">Kristen</option>
-          <option value="Katolik">Katolik</option>
-          <option value="Hindu">Hindu</option>
-          <option value="Budha">Budha</option>
-          <option value="Konghucu">Konghucu</option>
-        </select>
-      </div>
-      <div class="form-group-horizontal">
-        <label for="pekerjaanAyah">Pekerjaan:</label>
-        <input type="text" id="pekerjaanAyah" v-model="formData.pekerjaanAyah" placeholder="Cth: Pegawai Negeri" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="noTelpAyah">No. Telepon WA:</label>
-        <input type="text" id="noTelpAyah" v-model="formData.noTelpAyah" placeholder="Cth: 081234567890" required />
-      </div>
-    </div>
 
-    <div class="section">
-      <h3>Data Ibu</h3>
-      <div class="form-group-horizontal">
-        <label for="namaIbu">Nama Ibu:</label>
-        <input type="text" id="namaIbu" v-model="formData.namaIbu" placeholder="Cth: Maria Suryaningsih" required />
+      <!-- Card for Data Ibu -->
+      <div class="card">
+        <h3><span class="highlight">Data</span> Ibu</h3>
+        <div class="form-group-horizontal">
+          <label for="namaIbu">Nama Ibu:</label>
+          <input type="text" id="namaIbu" v-model="formData.namaIbu" placeholder="Cth: Maria Suryaningsih" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="tempatLahirIbu">Tempat Lahir:</label>
+          <input type="text" id="tempatLahirIbu" v-model="formData.tempatLahirIbu" placeholder="Cth: Semarang" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="tanggalLahirIbu">Tanggal Lahir:</label>
+          <input type="date" id="tanggalLahirIbu" v-model="formData.tanggalLahirIbu" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="nikIbu">NIK:</label>
+          <input type="text" id="nikIbu" v-model="formData.nikIbu" placeholder="Cth: 357081712170002" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="alamatIbu">Alamat:</label>
+          <input type="text" id="alamatIbu" v-model="formData.alamatIbu" placeholder="Cth: Jl. Gusti Putri 2 No. 10 Semarang" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="agamaIbu">Agama:</label>
+          <select id="agamaIbu" v-model="formData.agamaIbu" required>
+            <option value="">Pilih Salah Satu</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+            <option value="Konghucu">Konghucu</option>
+          </select>
+        </div>
+        <div class="form-group-horizontal">
+          <label for="pekerjaanIbu">Pekerjaan:</label>
+          <input type="text" id="pekerjaanIbu" v-model="formData.pekerjaanIbu" placeholder="Cth: Pegawai Swasta" required />
+        </div>
+        <div class="form-group-horizontal">
+          <label for="noTelpIbu">No. Telepon WA:</label>
+          <input type="text" id="noTelpIbu" v-model="formData.noTelpIbu" placeholder="Cth: 081234567891" required />
+        </div>
       </div>
-      <div class="form-group-horizontal">
-        <label for="tempatLahirIbu">Tempat Lahir:</label>
-        <input type="text" id="tempatLahirIbu" v-model="formData.tempatLahirIbu" placeholder="Cth: Semarang" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="tanggalLahirIbu">Tanggal Lahir:</label>
-        <input type="date" id="tanggalLahirIbu" v-model="formData.tanggalLahirIbu" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="nikIbu">NIK:</label>
-        <input type="text" id="nikIbu" v-model="formData.nikIbu" placeholder="Cth: 357081712170002" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="alamatIbu">Alamat:</label>
-        <input type="text" id="alamatIbu" v-model="formData.alamatIbu" placeholder="Cth: Jl. Gusti Putri 2 No. 10 Semarang" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="agamaIbu">Agama:</label>
-        <select id="agamaIbu" v-model="formData.agamaIbu" required>
-          <option value="">Pilih Salah Satu</option>
-          <option value="Islam">Islam</option>
-          <option value="Kristen">Kristen</option>
-          <option value="Katolik">Katolik</option>
-          <option value="Hindu">Hindu</option>
-          <option value="Budha">Budha</option>
-          <option value="Konghucu">Konghucu</option>
-        </select>
-      </div>
-      <div class="form-group-horizontal">
-        <label for="pekerjaanIbu">Pekerjaan:</label>
-        <input type="text" id="pekerjaanIbu" v-model="formData.pekerjaanIbu" placeholder="Cth: Ibu Rumah Tangga" required />
-      </div>
-      <div class="form-group-horizontal">
-        <label for="noTelpIbu">No. Telepon WA:</label>
-        <input type="text" id="noTelpIbu" v-model="formData.noTelpIbu" placeholder="Cth: 081234567890" required />
-      </div>
-    </div>
 
-    <div class="section">
-      <h4>Upload Dokumen</h4>
-      <div class="form-group-horizontal">
-        <label for="fotoAnak">Upload Foto Anak:</label>
-        <input type="file" id="fotoAnak" @change="handleFileChange('fotoAnak', $event)" />
-        <p v-if="fileErrors.fotoAnak" class="error">{{ fileErrors.fotoAnak }}</p>
+            <!-- Card for Upload Dokumen -->
+      <div class="card">
+        <h3><span class="highlight">Upload</span> Dokumen</h3>
+        <div class="form-group-horizontal">
+          <label for="fotoAnak">Upload Foto Anak:</label>
+          <input type="file" id="fotoAnak" @change="handleFileChange('fotoAnak', $event)" />
+          <p v-if="fileErrors.fotoAnak" class="error">{{ fileErrors.fotoAnak }}</p>
+        </div>
+        <div class="form-group-horizontal">
+          <label for="fotoKK">Upload Foto Kartu Keluarga:</label>
+          <input type="file" id="fotoKK" @change="handleFileChange('fotoKK', $event)" />
+          <p v-if="fileErrors.fotoKK" class="error">{{ fileErrors.fotoKK }}</p>
+        </div>
+        <div class="form-group-horizontal">
+          <label for="buktiPKH_KIP">Upload Bukti PKH (Program Keluarga Harapan) / KIP (Kartu Indonesia Pintar):</label>
+          <input type="file" id="buktiPKH_KIP" @change="handleFileChange('buktiPKH_KIP', $event)" />
+          <p v-if="fileErrors.buktiPKH_KIP" class="error">{{ fileErrors.buktiPKH_KIP }}</p>
+        </div>
       </div>
-      <div class="form-group-horizontal">
-        <label for="fotoKK">Upload Foto Kartu Keluarga:</label>
-        <input type="file" id="fotoKK" @change="handleFileChange('fotoKK', $event)" />
-        <p v-if="fileErrors.fotoKK" class="error">{{ fileErrors.fotoKK }}</p>
-      </div>
-      <div class="form-group-horizontal">
-        <label for="buktiPKH_KIP">Upload Bukti PKH (Program Keluarga Harapan) / KIP (Kartu Indonesia Pintar):</label>
-        <input type="file" id="buktiPKH_KIP" @change="handleFileChange('buktiPKH_KIP', $event)" />
-        <p v-if="fileErrors.buktiPKH_KIP" class="error">{{ fileErrors.buktiPKH_KIP }}</p>
-      </div>
-    </div>
+
 
       <div class="form-actions">
-        <button type="button" @click="goBack">Kembali</button>
-        <button type="reset" @click="resetForm">Reset</button>
-        <button type="submit">Kumpulkan</button>
+        <button type="button" @click="goBack" class="btn-back-reset">Kembali</button>
+        <button type="reset" @click="resetForm" class="btn-back-reset">Reset</button>
+        <button type="submit" class="btn-submit">Kumpulkan</button>
       </div>
     </form>
   </div>
@@ -215,64 +219,44 @@ export default {
   },
   methods: {
     handleFileChange(type, event) {
-    const file = event.target.files[0];
-
-    if (file) {
-      this.fileErrors[type] = ''; // Reset error message
-      this.formData[type] = file; // Simpan file ke formData
-    } else {
-      this.fileErrors[type] = 'File tidak valid'; // Pesan error jika tidak ada file
-      this.formData[type] = null; // Reset file input
-    }
+      const file = event.target.files[0];
+      if (file) {
+        this.fileErrors[type] = '';
+        this.formData[type] = file;
+      } else {
+        this.fileErrors[type] = 'File tidak valid';
+        this.formData[type] = null;
+      }
     },
     handleSubmit() {
-      // Logika untuk mengirim data form
       console.log(this.formData);
+      this.scrollToTop();
     },
     resetForm() {
-      this.formData = {
-        opsiPendaftaran: '',
-        namaLengkap: '',
-        jenisKelamin: '',
-        tempatLahirAnak: '',
-        tanggalLahirAnak: '',
-        nikAnak: '',
-        alamatAnak: '',
-        agamaAnak: '',
-        fotoAnak: null,
-        fotoKK: null,
-        buktiPKH_KIP: null,
-        namaAyah: '',
-        tempatLahirAyah: '',
-        tanggalLahirAyah: '',
-        nikAyah: '',
-        alamatAyah: '',
-        agamaAyah: '',
-        pekerjaanAyah: '',
-        noTelpAyah: '',
-        namaIbu: '',
-        tempatLahirIbu: '',
-        tanggalLahirIbu: '',
-        nikIbu: '',
-        alamatIbu: '',
-        agamaIbu: '',
-        pekerjaanIbu: '',
-        noTelpIbu: '',
-      };
-      this.fileErrors = {
-        fotoAnak: '',
-        fotoKK: '',
-        buktiPKH_KIP: '',
-      };
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      Object.keys(this.formData).forEach(key => {
+        this.formData[key] = '';
+      });
+      Object.keys(this.fileErrors).forEach(key => {
+        this.fileErrors[key] = '';
+      });
+      this.scrollToTop();
     },
     goBack() {
       this.$router.push({ name: 'Home2' });
     },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+      });
+    },
+  },
+  mounted() {
+    // Scroll to top when the component is mounted
+    this.scrollToTop();
   },
 };
 </script>
+
 
 <style scoped>
 @import './style.css';
