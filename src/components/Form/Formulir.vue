@@ -147,7 +147,7 @@
         </div>
       </div>
 
-            <!-- Card for Upload Dokumen -->
+      <!-- Card for Upload Dokumen -->
       <div class="card">
         <h3><span class="highlight">Upload</span> Dokumen</h3>
         <div class="form-group-horizontal">
@@ -190,9 +190,6 @@ export default {
         nikAnak: '',
         alamatAnak: '',
         agamaAnak: '',
-        fotoAnak: null,
-        fotoKK: null,
-        buktiPKH_KIP: null,
         namaAyah: '',
         tempatLahirAyah: '',
         tanggalLahirAyah: '',
@@ -209,6 +206,9 @@ export default {
         agamaIbu: '',
         pekerjaanIbu: '',
         noTelpIbu: '',
+        fotoAnak: null,
+        fotoKK: null,
+        buktiPKH_KIP: null,
       },
       fileErrors: {
         fotoAnak: '',
@@ -216,6 +216,10 @@ export default {
         buktiPKH_KIP: '',
       },
     };
+  },
+  created() {
+    // Scroll ke atas saat form pertama kali dibuka
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   },
   methods: {
     handleFileChange(type, event) {
@@ -229,12 +233,17 @@ export default {
       }
     },
     handleSubmit() {
+      // Cek validitas form dan kirim data
       console.log(this.formData);
       this.scrollToTop();
     },
     resetForm() {
       Object.keys(this.formData).forEach(key => {
-        this.formData[key] = '';
+        if (typeof this.formData[key] === 'object' && this.formData[key] instanceof File) {
+          this.formData[key] = null;
+        } else {
+          this.formData[key] = '';
+        }
       });
       Object.keys(this.fileErrors).forEach(key => {
         this.fileErrors[key] = '';
@@ -247,13 +256,16 @@ export default {
     scrollToTop() {
       window.scrollTo({
         top: 0,
+        behavior: 'smooth'
       });
-    },
+    }
   },
   mounted() {
-    // Scroll to top when the component is mounted
-    this.scrollToTop();
-  },
+    // Menambahkan sedikit jeda sebelum scroll ke atas saat form pertama kali di-load
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
+  }
 };
 </script>
 
