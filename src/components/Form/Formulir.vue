@@ -160,10 +160,21 @@
           <input type="file" id="fotoKK" @change="handleFileChange('fotoKK', $event)" />
           <p v-if="fileErrors.fotoKK" class="error">{{ fileErrors.fotoKK }}</p>
         </div>
+      </div>
+      <div class="card">
+        <h3><span class="highlight">Penerima</span> PKH</h3>
         <div class="form-group-horizontal">
-          <label for="buktiPKH_KIP">Upload Bukti PKH (Program Keluarga Harapan) / KIP (Kartu Indonesia Pintar):</label>
-          <input type="file" id="buktiPKH_KIP" @change="handleFileChange('buktiPKH_KIP', $event)" />
-          <p v-if="fileErrors.buktiPKH_KIP" class="error">{{ fileErrors.buktiPKH_KIP }}</p>
+          <label for="statusPenerimaPKH">Apakah Penerima PKH?</label>
+          <select id="statusPenerimaPKH" v-model="formData.statusPenerimaPKH">
+            <option value="">Pilih Status</option>
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+        </div>
+        <!-- Upload Bukti PKH only visible if "Ya" is selected -->
+        <div v-if="formData.statusPenerimaPKH === 'Ya'" class="form-group-horizontal">
+          <label for="uploadBuktiPKH">Upload Bukti PKH:</label>
+          <input type="file" id="uploadBuktiPKH" accept="image/*" @change="handleFileUpload" />
         </div>
       </div>
 
@@ -208,12 +219,13 @@ export default {
         noTelpIbu: '',
         fotoAnak: null,
         fotoKK: null,
-        buktiPKH_KIP: null,
+        statusPenerimaPKH: '',
+        buktiPKH: null,
       },
       fileErrors: {
         fotoAnak: '',
         fotoKK: '',
-        buktiPKH_KIP: '',
+        buktiPKH: '',
       },
     };
   },
@@ -222,21 +234,66 @@ export default {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
   methods: {
-    handleFileChange(type, event) {
+    handleFileUpload(type, event) {
       const file = event.target.files[0];
       if (file) {
-        this.fileErrors[type] = '';
-        this.formData[type] = file;
+        // Validasi format file (hanya menerima jpeg, jpg, dan png)
+        const validImageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+        if (!validImageTypes.includes(file.type)) {
+          this.fileErrors[type] = 'File harus berupa gambar (jpeg, jpg, png)';
+        } else {
+          this.formData[type] = file;
+          this.fileErrors[type] = ''; // Hapus pesan error jika file valid
+        }
       } else {
         this.fileErrors[type] = 'File tidak valid';
         this.formData[type] = null;
       }
     },
     handleSubmit() {
-      // Cek validitas form dan kirim data
-      console.log(this.formData);
-      this.scrollToTop();
+      // Reset error messages
+      this.fileErrors.fotoAnak = '';
+      this.fileErrors.fotoKK = '';
+      this.fileErrors.buktiPKH = '';
+
+      // Validasi file yang diupload
+      if (!this.formData.fotoAnak) {
+        this.fileErrors.fotoAnak = 'Foto anak harus diupload';
+      }
+      if (!this.formData.fotoKK) {
+        this.fileErrors.fotoKK = 'Foto Kartu Keluarga harus diupload';
+      }
+      if (this.formData.statusPenerimaPKH === 'Ya' && !this.formData.buktiPKH) {
+        this.fileErrors.buktiPKH = 'Bukti PKH harus diupload jika terdaftar sebagai penerima PKH';
+      }
+
+      // Jika tidak ada error, lanjutkan pengiriman data
+      if (!this.fileErrors.fotoAnak && !this.fileErrors.fotoKK && !(this.formData.statusPenerimaPKH === 'Ya' && !this.formData.buktiPKH)) {
+        // Buat objek FormData untuk mengirimkan data dan file
+        const formData = new FormData();
+        for (const key in this.formData) {
+          formData.append(key, this.formData[key]);
+        }
+
+        // Kirim data ke backend menggunakan Axios atau Fetch
+        this.$http.post('API_ENDPOINT/submit-form', formData)
+          .then(response => {
+            // Tangani jika respons sukses
+            if (response.data.success) {
+              this.$swal('Berhasil', 'Data berhasil disimpan!', 'success');
+              // Lanjutkan ke validasi murid atau halaman selanjutnya
+              this.$router.push('/validasi-murid');
+            } else {
+              this.$swal('Gagal', 'Terjadi kesalahan saat menyimpan data!', 'error');
+            }
+          })
+          .catch(error => {
+            console.error(error);
+            this.$swal('Error', 'Terjadi kesalahan saat menghubungi server.', 'error');
+          });
+      }
     },
+
     resetForm() {
       Object.keys(this.formData).forEach(key => {
         if (typeof this.formData[key] === 'object' && this.formData[key] instanceof File) {
@@ -250,24 +307,28 @@ export default {
       });
       this.scrollToTop();
     },
+    
     goBack() {
       this.$router.push({ name: 'Home2' });
     },
+    
     scrollToTop() {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-    }
+    },
   },
   mounted() {
-    // Menambahkan sedikit jeda sebelum scroll ke atas saat form pertama kali di-load
+    // Scroll ke atas sedikit jeda saat form pertama kali di-load
     setTimeout(() => {
       this.scrollToTop();
     }, 100);
-  }
+  },
 };
 </script>
+
+
 
 
 <style scoped>
