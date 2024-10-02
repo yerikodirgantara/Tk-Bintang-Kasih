@@ -210,6 +210,29 @@
   </div>
 </section>
 
+<!-- Infinite Logo Carousel Section -->
+<section id="logo-carousel" class="container my-5 section-box">
+  <h2 class="text-center mb-4">Our Partnership:</h2>
+  <div class="logos">
+    <div class="logos-slide" ref="logosSlide">
+      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid">
+      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid">
+      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 3" class="img-fluid">
+      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 4" class="img-fluid">
+      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 5" class="img-fluid">
+      <!-- Duplicate the logos to create infinite loop effect -->
+      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid">
+      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid">
+      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 3" class="img-fluid">
+      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 4" class="img-fluid">
+      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 5" class="img-fluid">
+    </div>
+  </div>
+</section>
+
+
+
+
     <Footer />
     <a href="https://wa.me/6282225386373" class="whatsapp-float" target="_blank">
       <i class="bi bi-whatsapp"></i>
@@ -242,7 +265,7 @@ export default {
       typingTimeoutId: null,
       eraseTimeoutId: null,
       pauseTimeoutId: null,
-      isErasing: false
+      isErasing: false,
     };
   },
   mounted() {
@@ -250,13 +273,15 @@ export default {
     axios.get('https://api.example.com/teachers')
       .then(response => {
         this.organization = response.data;  // Set the organization data
+        // Clone and append logos after fetching data
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  },
-  mounted() {
-    this.startTypewriterEffect();
+
+    this.startTypewriterEffect(); // Pindahkan ke dalam satu mounted
   },
   methods: {
     startTypewriterEffect() {
@@ -304,41 +329,6 @@ export default {
         icon: 'info',
         confirmButtonText: 'Tutup'
       });
-    },
-    showDaftarKBAlert() {
-    Swal.fire({
-      title: 'Pendaftaran Kelompok Bermain',
-      text: 'Silahkan "Kunjungi Halaman" untuk mendaftar sebagai Siswa Kelompok Bermain (KB) Bintang Kasih.',
-      icon: 'question',
-      confirmButtonText: 'Kunjungi Halaman',
-      showCancelButton: true,
-      cancelButtonText: 'Batal',
-      confirmButtonColor: '#007bff',
-      cancelButtonColor: '#d33',
-      reverseButtons: true
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Menggunakan Vue Router untuk redirect
-        this.$router.push('/Formkb');
-      }
-    });
-    },
-    showDaftarTKAlert() {
-      Swal.fire({
-        title: 'Pendaftaran Taman Kanak-Kanak',
-        text: 'Silahkan klik "Kunjungi Halaman" untuk mendaftar sebagai Siswa Taman Kanak-Kanak (TK) Bintang Kasih.',
-        icon: 'question',
-        confirmButtonText: 'Kunjungi Halaman',
-        showCancelButton: true,
-        cancelButtonText: 'Batal',
-        confirmButtonColor: '#007bff',
-        cancelButtonColor: '#d33',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          this.$router.push('/Formtk');
-        }
-      });
     }
   },
   beforeDestroy() {
@@ -346,6 +336,8 @@ export default {
   }
 };
 </script>
+
+
 
 
 
@@ -644,5 +636,81 @@ section {
     background-color: #1d65a4;
     border-color: #1d65a4;
   }
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+  animation-timing-function: linear;
+  /* Duplicate the logos by using ::after pseudo-element */
+  position: relative;
+}
+
+.logos-slide::after {
+  content: attr(data-duplicate);
+  display: inline-block;
+}
+
+.logos-slide img {
+  height: 150px;
+  margin: 0 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover transition */
+}
+
+/* Logo Hover Effect */
+.logos-slide img:hover {
+  transform: scale(1.1); /* Scale up the logo on hover */
+  opacity: 0.9; /* Slightly fade the logo on hover */
+}
 
 </style>

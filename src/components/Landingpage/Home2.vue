@@ -215,18 +215,34 @@
 <section id="pendaftaran" class="container my-5 section-box">
   <h2 class="text-center mb-4">Penerimaan Murid Baru</h2>
   <div class="row justify-content-center"> 
-    <div class="col-md-6"> 
-      <div class="card"> <!-- Tambahkan card di sini -->
-        <div class="card-body text-center">
-          <i class="fas fa-book-open fa-4x mb-3"></i> 
-          <h3>Pendaftaran Murid KB & TK Bintang Kasih</h3>
-          <p>Pendaftaran peserta didik baru.</p>
-          <button @click="showDaftarAlert" class="btn btn-primary custom-btn">Daftar Sekarang</button>
+    <!-- Card pendaftaran -->
+    <div class="col-md-8">
+      <div class="card purple-shadow border-0"> <!-- Use the new purple-shadow class -->
+        <div class="row g-0">
+          <!-- Kolom gambar -->
+          <!-- Kolom gambar -->
+        <div class="col-md-5">
+          <img src="../../assets/gambar_5.jpg" alt="Gambar Pendaftaran Murid Baru" 
+              class="img-fluid" style="object-fit: cover; height: 100%; border-radius: 20px 20px 20px 20px;">
+        </div>
+
+          
+          <!-- Kolom teks pendaftaran -->
+          <div class="col-md-7">
+            <div class="card-body text-center d-flex flex-column justify-content-center">
+              <i class="fas fa-book-open fa-4x mb-3 text-primary"></i> 
+              <h3 class="card-title">Pendaftaran Murid KB & TK Bintang Kasih</h3>
+              <p class="card-text">Pendaftaran peserta didik baru.</p>
+              <button @click="showDaftarAlert" class="btn btn-primary custom-btn mt-3">Daftar Sekarang</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
   
       <Footer />
@@ -645,4 +661,8 @@
       border-color: #1d65a4;
     }
   
+    .purple-shadow {
+      box-shadow: 0 4px 8px rgba(127, 134, 212, 0.737);/* Change color and opacity as needed */
+    }
+
   </style>
