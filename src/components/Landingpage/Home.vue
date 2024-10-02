@@ -52,7 +52,7 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4">About KB & TK Bintang Kasih</h2>
+    <h2 class="text-center mb-4">Tentang KB & TK Bintang Kasih</h2>
     <div class="row">
       <div class="col-md-4">
         <div class="container">
@@ -212,20 +212,16 @@
 
 <!-- Infinite Logo Carousel Section -->
 <section id="logo-carousel" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Our Partnership:</h2>
+  <h2 class="text-center mb-4">Kemitraan Kami:</h2>
   <div class="logos">
     <div class="logos-slide" ref="logosSlide">
       <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid">
       <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid">
-      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 3" class="img-fluid">
-      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 4" class="img-fluid">
-      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 5" class="img-fluid">
-      <!-- Duplicate the logos to create infinite loop effect -->
-      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid">
-      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid">
-      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 3" class="img-fluid">
-      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 4" class="img-fluid">
-      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 5" class="img-fluid">
+      <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid">
+      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid">
+      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid">
+      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid">
+
     </div>
   </div>
 </section>
@@ -273,15 +269,16 @@ export default {
     axios.get('https://api.example.com/teachers')
       .then(response => {
         this.organization = response.data;  // Set the organization data
-        // Clone and append logos after fetching data
-        var copy = document.querySelector(".logos-slide").cloneNode(true);
-        document.querySelector(".logos").appendChild(copy);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
 
     this.startTypewriterEffect(); // Pindahkan ke dalam satu mounted
+
+    // Handle cloning for infinite scrolling
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
   },
   methods: {
     startTypewriterEffect() {
@@ -336,9 +333,6 @@ export default {
   }
 };
 </script>
-
-
-
 
 
 <style scoped>
@@ -637,7 +631,7 @@ section {
     border-color: #1d65a4;
   }
 
-  * {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -692,8 +686,6 @@ body {
   display: inline-block;
   animation: 15s slide infinite linear;
   animation-timing-function: linear;
-  /* Duplicate the logos by using ::after pseudo-element */
-  position: relative;
 }
 
 .logos-slide::after {
@@ -704,13 +696,14 @@ body {
 .logos-slide img {
   height: 150px;
   margin: 0 40px;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover transition */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Logo Hover Effect */
 .logos-slide img:hover {
-  transform: scale(1.1); /* Scale up the logo on hover */
-  opacity: 0.9; /* Slightly fade the logo on hover */
+  transform: scale(1.1);
+  opacity: 0.9;
 }
+
 
 </style>
