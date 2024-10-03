@@ -222,7 +222,7 @@
           <!-- Kolom gambar -->
           <!-- Kolom gambar -->
         <div class="col-md-5">
-          <img src="../../assets/gambar_5.jpg" alt="Gambar Pendaftaran Murid Baru" 
+          <img src="../../assets/PPDB.jpg" alt="Gambar Pendaftaran Murid Baru" 
               class="img-fluid" style="object-fit: cover; height: 100%; border-radius: 20px 20px 20px 20px;">
         </div>
 

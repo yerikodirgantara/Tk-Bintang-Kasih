@@ -652,7 +652,7 @@ body {
 
 .logos {
   overflow: hidden;
-  padding: 60px 0;
+  padding: 10px 0;
   background: white;
   white-space: nowrap;
   position: relative;
@@ -695,7 +695,7 @@ body {
 
 .logos-slide img {
   height: 150px;
-  margin: 0 40px;
+  margin: 0px 30px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
