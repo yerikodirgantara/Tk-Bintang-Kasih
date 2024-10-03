@@ -220,7 +220,7 @@
         <div class="row g-0">
           <!-- Kolom gambar -->
           <div class="col-md-5">
-            <img src="../../assets/PPDB.jpg" alt="Gambar Pendaftaran Murid Baru" 
+            <img src="../../assets/PPDB.jpg" oncontextmenu="return false;" alt="Gambar Pendaftaran Murid Baru"
               class="img-fluid" style="object-fit: cover; height: 100%; border-radius: 20px 20px 20px 20px;">
           </div>
 
@@ -261,14 +261,14 @@
     },
     data() {
       return {
-        organization: [], // Empty array initially
+        organization: [], // Array kosong untuk menyimpan data API
         texts: ['KB', 'TK'],
         currentTextIndex: 0,
         displayedText: '',
         charIndex: 0,
-        typingInterval: 150, // kecepatan mengetik dalam milidetik
-        eraseInterval: 100,  // kecepatan menghapus dalam milidetik
-        pauseDuration: 1500, // durasi jeda antara teks dalam milidetik
+        typingInterval: 150, // Kecepatan mengetik (ms)
+        eraseInterval: 100,  // Kecepatan menghapus (ms)
+        pauseDuration: 1500, // Durasi jeda antar teks (ms)
         typingTimeoutId: null,
         eraseTimeoutId: null,
         pauseTimeoutId: null,
@@ -276,16 +276,23 @@
       };
     },
     mounted() {
-      // Fetch data from API when the component is mounted
+      // Fetch data from API ketika komponen di-mount
       axios.get('https://api.example.com/teachers')
         .then(response => {
-          this.organization = response.data;  // Set the organization data
+          this.organization = response.data;  // Mengisi data organisasi dengan hasil API
         })
         .catch(error => {
           console.error('Error fetching data:', error);
         });
-    },
-    mounted() {
+
+      // Mencegah klik kanan pada seluruh gambar di halaman
+      document.addEventListener('contextmenu', (event) => {
+        if (event.target.tagName === 'IMG') {
+          event.preventDefault();
+        }
+      });
+
+      // Memulai efek typewriter
       this.startTypewriterEffect();
     },
     methods: {
@@ -336,22 +343,22 @@
         });
       },
       showDaftarAlert() {
-      Swal.fire({
-        title: 'Pendaftaran Kelompok Bermain',
-        text: 'Silahkan "Kunjungi Halaman" untuk mengisi formulir pendaftaran sebagai Siswa KB & TK Bintang Kasih.',
-        icon: 'question',
-        confirmButtonText: 'Kunjungi Halaman',
-        showCancelButton: true,
-        cancelButtonText: 'Batal',
-        confirmButtonColor: '#007bff',
-        cancelButtonColor: '#d33',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          // Menggunakan Vue Router untuk redirect
-          this.$router.push('/Formulir');
-        }
-      });
+        Swal.fire({
+          title: 'Pendaftaran Kelompok Bermain',
+          text: 'Silahkan "Kunjungi Halaman" untuk mengisi formulir pendaftaran sebagai Siswa KB & TK Bintang Kasih.',
+          icon: 'question',
+          confirmButtonText: 'Kunjungi Halaman',
+          showCancelButton: true,
+          cancelButtonText: 'Batal',
+          confirmButtonColor: '#007bff',
+          cancelButtonColor: '#d33',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Menggunakan Vue Router untuk redirect
+            this.$router.push('/Formulir');
+          }
+        });
       }
     },
     beforeDestroy() {
