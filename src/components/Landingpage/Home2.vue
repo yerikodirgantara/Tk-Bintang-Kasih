@@ -210,27 +210,24 @@
   </div>
 </section>
 
-  
   <!-- Pendaftaran Siswa Section -->
 <section id="pendaftaran" class="container my-5 section-box">
   <h2 class="text-center mb-4">Penerimaan Murid Baru</h2>
   <div class="row justify-content-center"> 
     <!-- Card pendaftaran -->
     <div class="col-md-8">
-      <div class="card purple-shadow border-0"> <!-- Use the new purple-shadow class -->
+      <div class="card purple-shadow border-0">
         <div class="row g-0">
           <!-- Kolom gambar -->
-          <!-- Kolom gambar -->
-        <div class="col-md-5">
-          <img src="../../assets/PPDB.jpg" alt="Gambar Pendaftaran Murid Baru" 
+          <div class="col-md-5">
+            <img src="../../assets/PPDB.jpg" alt="Gambar Pendaftaran Murid Baru" 
               class="img-fluid" style="object-fit: cover; height: 100%; border-radius: 20px 20px 20px 20px;">
-        </div>
+          </div>
 
-          
           <!-- Kolom teks pendaftaran -->
-          <div class="col-md-7">
-            <div class="card-body text-center d-flex flex-column justify-content-center">
-              <i class="fas fa-book-open fa-4x mb-3 text-primary"></i> 
+          <div class="col-md-7 d-flex align-items-center"> 
+            <div class="card-body text-center mx-auto">
+              <i class="fas fa-book-open fa-4x mb-3" style="color: #7f86d4;"></i> 
               <h3 class="card-title">Pendaftaran Murid KB & TK Bintang Kasih</h3>
               <p class="card-text">Pendaftaran peserta didik baru.</p>
               <button @click="showDaftarAlert" class="btn btn-primary custom-btn mt-3">Daftar Sekarang</button>
@@ -241,8 +238,6 @@
     </div>
   </div>
 </section>
-
-
 
   
       <Footer />

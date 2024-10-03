@@ -215,16 +215,16 @@
   <h2 class="text-center mb-4">Kemitraan Kami:</h2>
   <div class="logos">
     <div class="logos-slide" ref="logosSlide">
-      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid">
-      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid">
-      <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid">
-      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid">
-      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid">
-      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid">
-
+      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid" oncontextmenu="return false;">
+      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid" oncontextmenu="return false;">
+      <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid" oncontextmenu="return false;">
+      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;">
+      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid" oncontextmenu="return false;">
+      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid" oncontextmenu="return false;">
     </div>
   </div>
 </section>
+
 
 
 
@@ -274,11 +274,21 @@ export default {
         console.error('Error fetching data:', error);
       });
 
-    this.startTypewriterEffect(); // Pindahkan ke dalam satu mounted
+    this.startTypewriterEffect(); // Mulai efek mengetik
 
     // Handle cloning for infinite scrolling
-    var copy = document.querySelector(".logos-slide").cloneNode(true);
-    document.querySelector(".logos").appendChild(copy);
+    const logosSlide = document.querySelector(".logos-slide");
+    if (logosSlide) {
+      const copy = logosSlide.cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    }
+
+    // Prevent right-click on images
+    document.addEventListener('contextmenu', function(event) {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
   },
   methods: {
     startTypewriterEffect() {
@@ -333,6 +343,7 @@ export default {
   }
 };
 </script>
+
 
 
 <style scoped>
