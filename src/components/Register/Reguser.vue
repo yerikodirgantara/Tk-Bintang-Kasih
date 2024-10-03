@@ -105,7 +105,7 @@
   
       validateUsername() {
         if (this.user.username.length < 3) {
-          this.usernameError = 'Nama pengguna harus minimal 3 karakter.';
+          this.usernameError = 'NIK harus 16 karakter.';
           Swal.fire('Error', this.usernameError, 'error');
         }
       },
