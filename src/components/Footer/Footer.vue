@@ -7,7 +7,7 @@
           <h5 class="text-uppercase mb-3 position-relative">Contact Us:</h5>
           <hr class="section-underline" data-aos="fade-up" data-aos-delay="100">
           <p class="mb-3" data-aos="fade-up" data-aos-delay="100">
-            <i class="bi bi-geo-alt-fill"></i> 
+            <i class="fas fa-map-marker-alt"></i> 
             <strong>Alamat</strong><br>
             <span>
               Jl. Dolog Lor Raya, No.7, Tlogosari Wetan,<br>
@@ -16,7 +16,7 @@
             </span>
           </p>
           <p class="mb-3" data-aos="fade-up" data-aos-delay="200">
-            <i class="bi bi-telephone-fill"></i> 
+            <i class="fas fa-phone-alt"></i> 
             <strong>Telepon</strong><br>
             <a href="tel:+620248502772" class="text-white">
               +62 (024) 850 2772
@@ -26,7 +26,7 @@
             </a>
           </p>
           <p class="mb-3" data-aos="fade-up" data-aos-delay="300">
-            <i class="bi bi-envelope-fill"></i> 
+            <i class="fas fa-envelope"></i> 
             <strong>Email</strong><br>
             <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com" class="text-white">
               tkbintangkasih.tlogomulyo@gmail.com
@@ -41,19 +41,19 @@
           <div class="social-icons d-flex flex-column align-items-start">
             <div class="social-icon-container my-2" data-aos="fade-right" data-aos-delay="200">
               <a href="https://wa.me/6282225386373" class="social-icon" target="_blank">
-                <i class="bi bi-whatsapp"></i>
+                <i class="fab fa-whatsapp"></i>
               </a>
               <span>WhatsApp</span>
             </div>
             <div class="social-icon-container my-2" data-aos="fade-right" data-aos-delay="300">
               <a href="https://instagram.com/kbtkbintangkasih.tlogomulyo/" class="social-icon" target="_blank">
-                <i class="bi bi-instagram"></i>
+                <i class="fab fa-instagram"></i>
               </a>
               <span>Instagram</span>
             </div>
             <div class="social-icon-container my-2" data-aos="fade-right" data-aos-delay="400">
               <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com" class="social-icon" target="_blank">
-                <i class="bi bi-envelope"></i>
+                <i class="fas fa-envelope"></i>
               </a>
               <span>Email</span>
             </div>
@@ -64,6 +64,7 @@
     </div>
   </footer>
 </template>
+
 
 <script>
 export default {
