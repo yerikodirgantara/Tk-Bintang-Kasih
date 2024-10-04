@@ -1,7 +1,7 @@
 <template>
   <footer class="text-center py-4">
     <div class="container">
-      <p class="mb-3">Hubungi Kami</p>
+      <p class="mb-3">Hubungi Kami:</p>
       <div class="social-icons mb-3">
         <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com" class="text-muted mx-3" target="_blank">
           <i class="bi bi-envelope"></i>
