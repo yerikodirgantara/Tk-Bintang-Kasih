@@ -52,7 +52,7 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih</h2>
+    <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih:</h2>
     <div class="row">
       <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
         <div class="container">
@@ -94,7 +94,7 @@
 
     <!-- Visi Misi Section with Icons -->
 <section id="visi-misi" class="container my-5">
-  <h2 class="text-center mb-4" data-aos="fade-up">Visi dan Misi</h2>
+  <h2 class="text-center mb-4" data-aos="fade-up">Visi dan Misi:</h2>
   <div class="row d-flex align-items-stretch">
     <div class="col-md-6 mb-3" data-aos="fade-right">
       <div class="card text-center h-100">
@@ -128,7 +128,7 @@
 
 <!-- Lokasi Sekolah Section -->
 <section id="lokasi-sekolah" class="container my-5 section-box">
-  <h2 class="text-center mb-4" data-aos="fade-up">Lokasi Sekolah & Kontak Kami</h2>
+  <h2 class="text-center mb-4" data-aos="fade-up">Lokasi Sekolah & Kontak Kami:</h2>
   <div class="row justify-content-center">
     <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
       <!-- Card Besar -->
@@ -150,7 +150,7 @@
             <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="text-center card-title mb-4">Kontak Kami</h4>
+                  <h4 class="text-center card-title mb-4">Kontak Kami:</h4>
                   <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
                   <ul class="list-unstyled">
                     <li class="mb-2">
@@ -179,7 +179,7 @@
 
     <!-- Organizational Chart Section -->
 <section id="bagan-organisasi" class="container my-5 section-box" data-aos="fade-up">
-  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Daftar Guru KB dan TK Bintang Kasih</h2>
+  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Daftar Guru KB dan TK Bintang Kasih:</h2>
   <div id="app">
     <div class="row justify-content-center">
       <div class="col-md-10">
