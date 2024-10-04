@@ -715,23 +715,23 @@ export default {
     }
 
     .btn-top {
-    position: fixed;
-    bottom: 130px; /* Jarak di atas tombol WhatsApp */
-    right: 40px;
-    background-color: #c6b6f4; /* Warna ungu */
-    color: white;
-    border: none;
-    padding: 10px 13px;
-    border-radius: 50%; /* Bentuk bulat */
-    cursor: pointer;
-    box-shadow: 0 0 10px 2px #2929296f; /* Bayangan hitam di luar tombol */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Menambahkan transisi untuk animasi */
-    z-index: 1000; /* Z-index tinggi agar berada di atas elemen lain */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px; /* Ukuran ikon lebih besar */
-}
+      position: fixed;
+      bottom: 130px; /* Jarak di atas tombol WhatsApp */
+      right: 40px;
+      background-color: #c6b6f4; /* Warna ungu */
+      color: white;
+      border: none;
+      padding: 10px 13px;
+      border-radius: 50%; /* Bentuk bulat */
+      cursor: pointer;
+      box-shadow: 0 0 10px 2px #2929296f; /* Bayangan hitam di luar tombol */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Menambahkan transisi untuk animasi */
+      z-index: 1000; /* Z-index tinggi agar berada di atas elemen lain */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Ukuran ikon lebih besar */
+    }
 
     /* Efek saat tombol hover */
     .btn-top:hover {
@@ -746,4 +746,4 @@ export default {
         transition: opacity 0.5s ease, transform 0.5s ease; /* Menambahkan transisi untuk opacity dan posisi */
     }
 
-  </style>
+</style>
