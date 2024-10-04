@@ -35,7 +35,7 @@
         </div>
 
         <!-- Social Media Links -->
-        <div class="col-md-4 mb-4 social-media text-right">
+        <div class="col-md-4 mb-4 social-media text-left">
           <h5 class="text-uppercase mb-3" data-aos="fade-up">Follow Us:</h5>
           <hr class="section-underline" data-aos="fade-up" data-aos-delay="100">
           <div class="social-icons d-flex flex-column align-items-start">
@@ -79,14 +79,14 @@ footer {
   padding: 2rem 0;
 }
 
-/* Styling untuk header "Hubungi Kami" dan "Follow Us" */
+/* Styling untuk header "Contact Us" dan "Follow Us" */
 h5 {
   font-size: 1.25rem;
   font-weight: bold;
   color: #ffffff;
 }
 
-/* Garis bawah pada "Hubungi Kami" dan "Follow Us" */
+/* Garis bawah pada "Contact Us" dan "Follow Us" */
 .section-underline {
   border: 1px solid #0062cc; /* Warna biru */
   width: 80px;
@@ -161,11 +161,58 @@ h5 {
 
 @media (max-width: 768px) {
   .contact-info, .social-media {
-    text-align: center; /* Rata tengah untuk layar kecil */
+    text-align: left; /* Ubah dari center ke left */
+  }
+
+  /* Styling untuk memastikan kolom berada di satu baris */
+  .row.justify-content-between {
+    flex-direction: column; /* Kolom diatur ke arah vertikal */
+  }
+
+  .social-media {
+    margin-top: 2rem; /* Beri jarak antara bagian kontak dan social media */
   }
 
   .social-icons {
-    align-items: center;
+    align-items: flex-start; /* Sesuaikan ikon agar rata kiri */
+  }
+
+  /* Penataan margin dan padding agar sesuai untuk layar kecil */
+  .social-icon-container {
+    margin-left: 0; /* Pastikan ikon berada di kiri tanpa tambahan margin */
+  }
+
+  /* Sesuaikan ukuran font dan ikon */
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  .contact-info p, .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info p, .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .footer-text {
+    margin-top: 1.5rem;
   }
 }
 </style>
