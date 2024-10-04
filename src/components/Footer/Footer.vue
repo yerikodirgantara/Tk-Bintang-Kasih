@@ -36,7 +36,7 @@
 
         <!-- Social Media Links -->
         <div class="col-md-4 mb-4 social-media text-right">
-          <h5 class="text-uppercase mb-3">Follow Us:</h5>
+          <h5 class="text-uppercase mb-3" data-aos="fade-up">Follow Us:</h5>
           <hr class="section-underline">
           <div class="social-icons d-flex flex-column align-items-start">
             <div class="social-icon-container my-2" data-aos="fade-right" data-aos-delay="200">
