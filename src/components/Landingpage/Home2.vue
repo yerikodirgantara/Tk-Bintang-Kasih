@@ -49,122 +49,123 @@
           <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
         </div>
     </section>
-  <!-- Keunggulan Section with Separate Containers -->
-  <section id="keunggulan" class="my-5">
-    <div class="container">
-      <h2 class="text-center mb-4">About KB & TK Bintang Kasih</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="container">
-            <div class="card text-center">
-              <div class="card-body pb-3">
-                <i class="bi bi-book fa-2x mb-3"></i>
-                <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
-                <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="container">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="bi bi-person-arms-up fa-2x mb-3"></i>
-                <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
-                <p class="card-text">KB & TK Bintang Kasih menanamkan nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="container">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="bi bi-mortarboard  fa-2x mb-3"></i>
-                <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
-                <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
-              </div>
+<!-- Keunggulan Section with Separate Containers -->
+<section id="keunggulan" class="my-5">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body pb-3">
+              <i class="bi bi-book fa-2x mb-3"></i>
+              <h5 class="card-title">Mendidik Siswa sesuai dengan ajaran Kristiani</h5>
+              <p class="card-text">KB & TK Bintang Kasih berada didekat bangunan gereja yang membuat peserta didik akan diajarkan nilai-nilai kristiani. KB & TK Bintang Kasih juga sering mengadakan kegiatan rohani seperti Paskah dan Natal.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  
-      <!-- Visi Misi Section with Icons -->
-    <section id="visi-misi" class="container my-5">
-      <h2 class="text-center mb-4">Visi dan Misi</h2>
-      <div class="row d-flex align-items-stretch">
-          <div class="col-md-6 mb-3">
-              <div class="card text-center h-100">
-                  <div class="card-body d-flex flex-column justify-content-between">
-                    <i class="fa fa-compass fa-2x mb-3"></i>
-                      <h5 class="card-title">Visi</h5>
-                      <p class="card-text text-justify mt-auto">Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan.
-                      Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.</p>
-                  </div>
-              </div>
-          </div>
-      <div class="col-md-6 mb-3">
-          <div class="card text-center h-100"> <!-- Tambahkan h-100 agar card memiliki tinggi penuh -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="container">
+          <div class="card text-center">
             <div class="card-body">
-              <i class="fa fa-rocket fa-2x mb-3"></i>
-              <h5 class="card-title">Misi</h5>
-              <ol class="misi-list text-left">
-                <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
-                <li>Menghargai keistimewaan setiap anak didik, menggali potensi, menyediakan wadah dan kesempatan untuk mengembangkannya sesuai talenta yang sudah dikaruniakan.</li>
-                <li>Menanamkan kasih kepada Tuhan sebagai dasar dari segala sesuatu, dan mewujudkannya dengan mengasihi sesama. Peduli dan memperhatikan lingkungan hidup dan makhluk lain sekitarnya. Memberi dorongan dan keberanian pada anak didik bertindak kasih secara nyata.</li>
-                <li>Memperlengkapi anak didik dengan pengetahuan dan keterampilan yang dapat diterapkan dan memberi manfaat bagi sesama, menyiapkan pondasi untuk masa depan dengan mengembangkan kreativitas dan kemauan untuk menjadi inventor dan inspirator yang mandiri dan bertanggung jawab.</li>
-              </ol>
+              <i class="bi bi-person-arms-up fa-2x mb-3"></i>
+              <h5 class="card-title">Mendidik Siswa untuk Bergotong Royong & Toleransi</h5>
+              <p class="card-text">KB & TK Bintang Kasih menanamkan nilai gotong royong, dan toleransi kepada siswa melalui aktivitas dan interaksi setiap hari. Siswa akan diajarkan untuk berkolaborasi dengan menghargai perbedaan.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  
-  
-  <!-- Lokasi Sekolah Section -->
-  <section id="lokasi-sekolah" class="container my-5 section-box">
-    <h2 class="text-center mb-4">Lokasi Sekolah & Kontak Kami</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-12">
-        <!-- Card Besar -->
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <!-- Card Lokasi Sekolah (Kiri) -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
-                    <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
-                      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
+      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="bi bi-mortarboard fa-2x mb-3"></i>
+              <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
+              <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Visi Misi Section with Icons -->
+<section id="visi-misi" class="container my-5">
+  <h2 class="text-center mb-4" data-aos="fade-up">Visi dan Misi</h2>
+  <div class="row d-flex align-items-stretch">
+    <div class="col-md-6 mb-3" data-aos="fade-right">
+      <div class="card text-center h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <i class="fa fa-compass fa-2x mb-3"></i>
+          <h5 class="card-title">Visi</h5>
+          <p class="card-text text-justify mt-auto">
+            Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan. Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3" data-aos="fade-left">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fa fa-rocket fa-2x mb-3"></i>
+          <h5 class="card-title">Misi</h5>
+          <ol class="misi-list text-left">
+            <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
+            <li>Menghargai keistimewaan setiap anak didik, menggali potensi, menyediakan wadah dan kesempatan untuk mengembangkannya sesuai talenta yang sudah dikaruniakan.</li>
+            <li>Menanamkan kasih kepada Tuhan sebagai dasar dari segala sesuatu, dan mewujudkannya dengan mengasihi sesama. Peduli dan memperhatikan lingkungan hidup dan makhluk lain sekitarnya. Memberi dorongan dan keberanian pada anak didik bertindak kasih secara nyata.</li>
+            <li>Memperlengkapi anak didik dengan pengetahuan dan keterampilan yang dapat diterapkan dan memberi manfaat bagi sesama, menyiapkan pondasi untuk masa depan dengan mengembangkan kreativitas dan kemauan untuk menjadi inventor dan inspirator yang mandiri dan bertanggung jawab.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Lokasi Sekolah Section -->
+<section id="lokasi-sekolah" class="container my-5 section-box">
+  <h2 class="text-center mb-4" data-aos="fade-up">Lokasi Sekolah & Kontak Kami</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+      <!-- Card Besar -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <!-- Card Lokasi Sekolah (Kiri) -->
+            <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
+                  <p>Kami berlokasi di Jl. Dolog Lor Raya No.7, Tlogosari Wetan, Kec. Pedurungan, Kota Semarang, Jawa Tengah</p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1450567943875!2d110.46970877475769!3d-6.992190593008854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d6b65eb5721%3A0x9ee1b4d92c836e63!2sTK%20Bintang%20Kasih!5e0!3m2!1sid!2sid!4v1725731173060!5m2!1sid!2sid" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
-              <!-- Card Kontak Kami (Kanan) -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="text-center card-title mb-4">Kontak Kami</h4>
-                    <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
-                    <ul class="list-unstyled">
-                      <li class="mb-2">
-                        <i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang
-                      </li>
-                      <li class="mb-2">
-                        <i class="fas fa-phone"></i> <strong>Telepon:</strong> <a href="tel:+6282225386373">+62 822 2538 6373</a>
-                      </li>
-                      <li class="mb-2">
-                        <i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com">tkbintangkasih.tlogomulyo@gmail.com</a>
-                      </li>
-                      <li>
-                        <i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB
-                      </li>
-                    </ul>
-                  </div>
+            </div>
+            <!-- Card Kontak Kami (Kanan) -->
+            <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center card-title mb-4">Kontak Kami</h4>
+                  <p>Jika ada pertanyaan, silakan hubungi kami melalui informasi di bawah ini:</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. Dolog Lor Raya No.7, Semarang
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-phone"></i> <strong>Telepon:</strong> <a href="tel:+6282225386373">+62 822 2538 6373</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com">tkbintangkasih.tlogomulyo@gmail.com</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 12.00 WIB
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -172,21 +173,21 @@
         </div>
       </div>
     </div>
-  </section>
-  
-  
-  
-      <!-- Organizational Chart Section -->
-<section id="bagan-organisasi" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
+  </div>
+</section>
+
+
+    <!-- Organizational Chart Section -->
+<section id="bagan-organisasi" class="container my-5 section-box" data-aos="fade-up">
+  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Daftar Guru KB dan TK Bintang Kasih</h2>
   <div id="app">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <!-- Carousel -->
-        <div id="carouselGuru" class="carousel slide" data-ride="carousel">
+        <div id="carouselGuru" class="carousel slide" data-ride="carousel" data-aos="fade-up" data-aos-delay="200">
           <div class="carousel-inner">
-            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]">
-              <div class="card"> <!-- Tambahkan card di sini -->
+            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card">
                 <div class="card-body text-center">
                   <img :src="person.photo" alt="Photo" class="rounded-circle mb-3" width="100" height="100">
                   <h5 class="card-title">{{ person.name }}</h5>
@@ -196,11 +197,11 @@
             </div>
           </div>
           <!-- Controls -->
-          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev" data-aos="fade-right" data-aos-delay="400">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next" data-aos="fade-left" data-aos-delay="400">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -210,22 +211,23 @@
   </div>
 </section>
 
-  <!-- Pendaftaran Siswa Section -->
-<section id="pendaftaran" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Penerimaan Murid Baru</h2>
+
+<!-- Pendaftaran Siswa Section -->
+<section id="pendaftaran" class="container my-5 section-box" data-aos="fade-up">
+  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Penerimaan Murid Baru</h2>
   <div class="row justify-content-center"> 
     <!-- Card pendaftaran -->
-    <div class="col-md-8">
+    <div class="col-md-8" data-aos="zoom-in" data-aos-delay="200">
       <div class="card purple-shadow border-0">
         <div class="row g-0">
           <!-- Kolom gambar -->
-          <div class="col-md-5">
+          <div class="col-md-5" data-aos="fade-right" data-aos-delay="300">
             <img src="../../assets/PPDB.jpg" oncontextmenu="return false;" alt="Gambar Pendaftaran Murid Baru"
               class="img-fluid" style="object-fit: cover; height: 100%; border-radius: 20px 20px 20px 20px;">
           </div>
 
           <!-- Kolom teks pendaftaran -->
-          <div class="col-md-7 d-flex align-items-center"> 
+          <div class="col-md-7 d-flex align-items-center" data-aos="fade-left" data-aos-delay="400"> 
             <div class="card-body text-center mx-auto">
               <i class="fas fa-book-open fa-4x mb-3" style="color: #7f86d4;"></i> 
               <h3 class="card-title">Pendaftaran Murid KB & TK Bintang Kasih</h3>
@@ -238,6 +240,7 @@
     </div>
   </div>
 </section>
+
 
   
       <Footer />

@@ -52,9 +52,9 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4">Tentang KB & TK Bintang Kasih</h2>
+    <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih</h2>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
         <div class="container">
           <div class="card text-center">
             <div class="card-body pb-3">
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
@@ -76,11 +76,11 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
-              <i class="bi bi-mortarboard  fa-2x mb-3"></i>
+              <i class="bi bi-mortarboard fa-2x mb-3"></i>
               <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
               <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
             </div>
@@ -93,48 +93,50 @@
 
 
     <!-- Visi Misi Section with Icons -->
-  <section id="visi-misi" class="container my-5">
-    <h2 class="text-center mb-4">Visi dan Misi</h2>
-    <div class="row d-flex align-items-stretch">
-        <div class="col-md-6 mb-3">
-            <div class="card text-center h-100">
-                <div class="card-body d-flex flex-column justify-content-between">
-                  <i class="fa fa-compass fa-2x mb-3"></i>
-                    <h5 class="card-title">Visi</h5>
-                    <p class="card-text text-justify mt-auto">Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan.
-                    Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.</p>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-6 mb-3">
-        <div class="card text-center h-100"> <!-- Tambahkan h-100 agar card memiliki tinggi penuh -->
-          <div class="card-body">
-            <i class="fa fa-rocket fa-2x mb-3"></i>
-            <h5 class="card-title">Misi</h5>
-            <ol class="misi-list text-left">
-              <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
-              <li>Menghargai keistimewaan setiap anak didik, menggali potensi, menyediakan wadah dan kesempatan untuk mengembangkannya sesuai talenta yang sudah dikaruniakan.</li>
-              <li>Menanamkan kasih kepada Tuhan sebagai dasar dari segala sesuatu, dan mewujudkannya dengan mengasihi sesama. Peduli dan memperhatikan lingkungan hidup dan makhluk lain sekitarnya. Memberi dorongan dan keberanian pada anak didik bertindak kasih secara nyata.</li>
-              <li>Memperlengkapi anak didik dengan pengetahuan dan keterampilan yang dapat diterapkan dan memberi manfaat bagi sesama, menyiapkan pondasi untuk masa depan dengan mengembangkan kreativitas dan kemauan untuk menjadi inventor dan inspirator yang mandiri dan bertanggung jawab.</li>
-            </ol>
-          </div>
+<section id="visi-misi" class="container my-5">
+  <h2 class="text-center mb-4" data-aos="fade-up">Visi dan Misi</h2>
+  <div class="row d-flex align-items-stretch">
+    <div class="col-md-6 mb-3" data-aos="fade-right">
+      <div class="card text-center h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <i class="fa fa-compass fa-2x mb-3"></i>
+          <h5 class="card-title">Visi</h5>
+          <p class="card-text text-justify mt-auto">
+            Mewujudkan generasi yang takut akan Tuhan, menjadi terang dan berkat bagi sesama dengan dasar Kasih. Dengan bimbingan yang penuh kasih, KB dan TK Bintang Kasih mencetak generasi yang tidak hanya cerdas, tetapi juga memiliki hati yang takut akan Tuhan, siap menjadi cahaya di dunia dan berkat bagi sesama. Generasi yang dibentuk sesuai dengan nilai-nilai ilahi dan kasih yang tulus akan membawa perubahan positif, menebar kebaikan di sekitarnya, serta memberi makna dalam setiap tindakan yang dilakukan. Di dalam setiap aspek kehidupan, kami berusaha menanamkan nilai-nilai kasih sayang, kepedulian, dan integritas. Bahwa generasi yang tumbuh dengan rasa tanggung jawab dan kecintaan terhadap Tuhan dan sesama akan menjadi pemimpin masa depan yang mampu menciptakan dunia yang lebih baik. Dengan metode pendidikan yang menyeluruh, KB dan TK Bintang Kasih mempersiapkan anak-anak untuk menjadi pribadi yang mandiri, berkarakter kuat, dan mampu menghadapi tantangan di berbagai aspek kehidupan.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+    <div class="col-md-6 mb-3" data-aos="fade-left">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fa fa-rocket fa-2x mb-3"></i>
+          <h5 class="card-title">Misi</h5>
+          <ol class="misi-list text-left">
+            <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
+            <li>Menghargai keistimewaan setiap anak didik, menggali potensi, menyediakan wadah dan kesempatan untuk mengembangkannya sesuai talenta yang sudah dikaruniakan.</li>
+            <li>Menanamkan kasih kepada Tuhan sebagai dasar dari segala sesuatu, dan mewujudkannya dengan mengasihi sesama. Peduli dan memperhatikan lingkungan hidup dan makhluk lain sekitarnya. Memberi dorongan dan keberanian pada anak didik bertindak kasih secara nyata.</li>
+            <li>Memperlengkapi anak didik dengan pengetahuan dan keterampilan yang dapat diterapkan dan memberi manfaat bagi sesama, menyiapkan pondasi untuk masa depan dengan mengembangkan kreativitas dan kemauan untuk menjadi inventor dan inspirator yang mandiri dan bertanggung jawab.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Lokasi Sekolah Section -->
 <section id="lokasi-sekolah" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Lokasi Sekolah & Kontak Kami</h2>
+  <h2 class="text-center mb-4" data-aos="fade-up">Lokasi Sekolah & Kontak Kami</h2>
   <div class="row justify-content-center">
-    <div class="col-md-12">
+    <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
       <!-- Card Besar -->
       <div class="card">
         <div class="card-body">
           <div class="row">
             <!-- Card Lokasi Sekolah (Kiri) -->
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
               <div class="card">
                 <div class="card-body">
                   <h4 class="text-center card-title mb-4">Lokasi Sekolah</h4>
@@ -145,7 +147,7 @@
               </div>
             </div>
             <!-- Card Kontak Kami (Kanan) -->
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
               <div class="card">
                 <div class="card-body">
                   <h4 class="text-center card-title mb-4">Kontak Kami</h4>
@@ -175,17 +177,16 @@
 </section>
 
 
-
     <!-- Organizational Chart Section -->
-<section id="bagan-organisasi" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Daftar Guru KB dan TK Bintang Kasih</h2>
+<section id="bagan-organisasi" class="container my-5 section-box" data-aos="fade-up">
+  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Daftar Guru KB dan TK Bintang Kasih</h2>
   <div id="app">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <!-- Carousel -->
-        <div id="carouselGuru" class="carousel slide" data-ride="carousel">
+        <div id="carouselGuru" class="carousel slide" data-ride="carousel" data-aos="fade-up" data-aos-delay="200">
           <div class="carousel-inner">
-            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]">
+            <div v-for="(person, index) in organization" :key="person.id" :class="['carousel-item', { active: index === 0 }]" data-aos="zoom-in" data-aos-delay="300">
               <div class="card">
                 <div class="card-body text-center">
                   <img :src="person.photo" alt="Photo" class="rounded-circle mb-3" width="100" height="100">
@@ -196,11 +197,11 @@
             </div>
           </div>
           <!-- Controls -->
-          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselGuru" role="button" data-slide="prev" data-aos="fade-right" data-aos-delay="400">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselGuru" role="button" data-slide="next" data-aos="fade-left" data-aos-delay="400">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -211,16 +212,16 @@
 </section>
 
 <!-- Infinite Logo Carousel Section -->
-<section id="logo-carousel" class="container my-5 section-box">
-  <h2 class="text-center mb-4">Kemitraan Kami:</h2>
+<section id="logo-carousel" class="container my-5 section-box" data-aos="fade-up">
+  <h2 class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Kemitraan Kami:</h2>
   <div class="logos">
-    <div class="logos-slide" ref="logosSlide">
-      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid" oncontextmenu="return false;">
-      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid" oncontextmenu="return false;">
-      <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid" oncontextmenu="return false;">
-      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;">
-      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid" oncontextmenu="return false;">
-      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid" oncontextmenu="return false;">
+    <div class="logos-slide" ref="logosSlide" data-aos="fade-up" data-aos-delay="200">
+      <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="300">
+      <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="400">
+      <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="500">
+      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="600">
+      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="700">
+      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="800">
     </div>
   </div>
 </section>
