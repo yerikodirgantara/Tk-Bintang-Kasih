@@ -735,7 +735,7 @@ export default {
 
     /* Efek saat tombol hover */
     .btn-top:hover {
-        background-color: #b180d9;
+        background-color: #8187d5;
         transform: translateY(-5px); /* Panah sedikit naik saat hover */
     }
 
