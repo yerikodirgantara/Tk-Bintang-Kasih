@@ -21,7 +21,7 @@
               About
             </a>
             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#about-tk">About KB & TK</a></li>
+              <li><a class="dropdown-item" href="#keunggulan">Tentang KB & TK</a></li>
               <li><a class="dropdown-item" href="#visi-misi">Visi & Misi</a></li>
               <li><a class="dropdown-item" href="#lokasi-sekolah">Lokasi Sekolah</a></li>
               <li><a class="dropdown-item" href="#bagan-organisasi">Daftar Guru</a></li>

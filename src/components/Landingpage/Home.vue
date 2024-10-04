@@ -46,7 +46,7 @@
           Bintang Kasih
         </h1>
         <p class="hero-subtitle">Membentuk generasi yang cerdas dan berbudi pekerti</p>
-        <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
+        <button @click="showSejarahAlert" class="btn btn-purple mt-3">Sejarah Lengkap</button>
       </div>
   </section>
 <!-- Keunggulan Section with Separate Containers -->
@@ -110,7 +110,7 @@
     <div class="col-md-6 mb-3" data-aos="fade-left">
       <div class="card text-center h-100">
         <div class="card-body">
-          <i class="fa fa-rocket fa-2x mb-3"></i>
+          <i class="fa fa-flag fa-2x mb-3"></i>
           <h5 class="card-title">Misi</h5>
           <ol class="misi-list text-left">
             <li>Menolong anak didik memiliki kehidupan rohani yang bertumbuh, mengenal Tuhan sejak dini dan mengenal identitas diri secara benar. Memiliki karakter yang berkualitas.</li>
@@ -228,9 +228,14 @@
 
 
 
-
-
     <Footer />
+    <button
+      v-if="showButton"
+      :class="['btn', 'btn-top', { 'fade-out': fade }]"
+      @click="scrollToTop">
+      <i class="fas fa-arrow-up"></i> <!-- Ikon Panah ke Atas -->
+    </button>
+
     <a href="https://wa.me/6282225386373" class="whatsapp-float" target="_blank">
       <i class="bi bi-whatsapp"></i>
     </a>
@@ -263,6 +268,8 @@ export default {
       eraseTimeoutId: null,
       pauseTimeoutId: null,
       isErasing: false,
+      showButton: false, // Kontrol untuk menampilkan tombol scroll to top
+      fade: false // Properti fade untuk animasi menghilang
     };
   },
   mounted() {
@@ -290,6 +297,14 @@ export default {
         event.preventDefault();
       }
     });
+
+    // Tambahkan event listener untuk scroll halaman
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    // Hapus event listener saat komponen dihancurkan
+    window.removeEventListener('scroll', this.handleScroll);
+    this.stopTypewriterEffect();
   },
   methods: {
     startTypewriterEffect() {
@@ -330,6 +345,24 @@ export default {
       clearTimeout(this.eraseTimeoutId);
       clearTimeout(this.pauseTimeoutId);
     },
+    handleScroll() {
+      // Tampilkan tombol jika scrollY lebih dari 100px
+      this.showButton = window.scrollY > 100;
+    },
+    scrollToTop() {
+      // Mengaktifkan animasi fade-out
+      this.fade = true;
+      
+      // Menggunakan timeout agar tombol menghilang setelah animasi selesai
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth', // Scroll dengan animasi halus
+        });
+        this.showButton = false; // Sembunyikan tombol setelah scroll ke atas
+        this.fade = false; // Reset status fade-out
+      }, 500); // Menunggu 500ms sampai animasi fade-out selesai
+    },
     showSejarahAlert() {
       Swal.fire({
         title: 'Sejarah Lengkap TK Bintang Kasih',
@@ -338,12 +371,10 @@ export default {
         confirmButtonText: 'Tutup'
       });
     }
-  },
-  beforeDestroy() {
-    this.stopTypewriterEffect();
   }
 };
 </script>
+
 
 
 
@@ -717,5 +748,48 @@ body {
   opacity: 0.9;
 }
 
+.btn-purple {
+      background-color: #7f86d4; /* Warna ungu */
+      color: white;
+      border: none;
+      box-shadow: 0 0 10px 2px black; /* Warna hitam di luar tombol */
+    }
+
+    .btn-purple:hover {
+      background-color: #7f86d4; /* Warna hover sedikit lebih gelap */
+      box-shadow: 0 0 12px 3px black; /* Tambahkan sedikit bayangan saat hover */
+    }
+
+    .btn-top {
+    position: fixed;
+    bottom: 130px; /* Jarak di atas tombol WhatsApp */
+    right: 40px;
+    background-color: #c6b6f4; /* Warna ungu */
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px #2929296f; /* Bayangan hitam di luar tombol */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Menambahkan transisi untuk animasi */
+    z-index: 1000; /* Z-index tinggi agar berada di atas elemen lain */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Ukuran ikon lebih besar */
+}
+
+    /* Efek saat tombol hover */
+    .btn-top:hover {
+        background-color: #b180d9;
+        transform: translateY(-5px); /* Panah sedikit naik saat hover */
+    }
+
+    /* Animasi fade-out untuk menghilangkan tombol saat diklik */
+    .fade-out {
+        opacity: 0; /* Mengurangi opacity */
+        transform: translateY(20px); /* Menggeser tombol ke bawah */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Menambahkan transisi untuk opacity dan posisi */
+    }
 
 </style>

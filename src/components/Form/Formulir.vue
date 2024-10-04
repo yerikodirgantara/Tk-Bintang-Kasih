@@ -97,6 +97,17 @@
           <input type="text" id="pekerjaanAyah" v-model="formData.pekerjaanAyah" placeholder="Cth: Pegawai Negeri" required />
         </div>
         <div class="form-group-horizontal">
+          <label for="gajiAyah">Gaji Ayah:</label>
+          <select id="gajiAyah" v-model="formData.gajiAyah" required>
+            <option value="">Pilih Rentang Gaji</option>
+            <option value="500000-999999">500.000 - 999.999</option>
+            <option value="1000000-1999999">1.000.000 - 1.999.999</option>
+            <option value="2000000-4999999">2.000.000 - 4.999.999</option>
+            <option value="5000000-20000000">5.000.000 - 20 jt</option>
+            <option value="lebih20jt">Diatas 20 jt</option>
+          </select>
+        </div>
+        <div class="form-group-horizontal">
           <label for="noTelpAyah">No. Telepon WA:</label>
           <input type="text" id="noTelpAyah" v-model="formData.noTelpAyah" placeholder="Cth: 081234567890" required />
         </div>
@@ -142,6 +153,17 @@
           <input type="text" id="pekerjaanIbu" v-model="formData.pekerjaanIbu" placeholder="Cth: Pegawai Swasta" required />
         </div>
         <div class="form-group-horizontal">
+          <label for="gajiAyah">Gaji Ibu:</label>
+          <select id="gajiAyah" v-model="formData.gajiAyah" required>
+            <option value="">Pilih Rentang Gaji</option>
+            <option value="500000-999999">500.000 - 999.999</option>
+            <option value="1000000-1999999">1.000.000 - 1.999.999</option>
+            <option value="2000000-4999999">2.000.000 - 4.999.999</option>
+            <option value="5000000-20000000">5.000.000 - 20 jt</option>
+            <option value="lebih20jt">Diatas 20 jt</option>
+          </select>
+        </div>
+        <div class="form-group-horizontal">
           <label for="noTelpIbu">No. Telepon WA:</label>
           <input type="text" id="noTelpIbu" v-model="formData.noTelpIbu" placeholder="Cth: 081234567891" required />
         </div>
@@ -160,7 +182,13 @@
           <input type="file" id="fotoKK" @change="handleFileChange('fotoKK', $event)" />
           <p v-if="fileErrors.fotoKK" class="error">{{ fileErrors.fotoKK }}</p>
         </div>
+        <div class="form-group-horizontal">
+          <label for="fotoAkte">Upload Foto Akte:</label>
+          <input type="file" id="fotoAkte" @change="handleFileChange('fotoAkte', $event)" />
+          <p v-if="fileErrors.fotoAkte" class="error">{{ fileErrors.fotoAkte }}</p>
+        </div>
       </div>
+
       <div class="card">
         <h3><span class="highlight">Penerima</span> PKH</h3>
         <div class="form-group-horizontal">
@@ -198,6 +226,7 @@ export default {
         jenisKelamin: '',
         tempatLahirAnak: '',
         tanggalLahirAnak: '',
+        tanggalLahirAyah: '',
         nikAnak: '',
         alamatAnak: '',
         agamaAnak: '',
@@ -208,6 +237,7 @@ export default {
         alamatAyah: '',
         agamaAyah: '',
         pekerjaanAyah: '',
+        gajiAyah: '',
         noTelpAyah: '',
         namaIbu: '',
         tempatLahirIbu: '',
@@ -216,15 +246,18 @@ export default {
         alamatIbu: '',
         agamaIbu: '',
         pekerjaanIbu: '',
+        gajiIbu: '',
         noTelpIbu: '',
         fotoAnak: null,
         fotoKK: null,
+        fotoAkte: null, // Menambahkan foto akte
         statusPenerimaPKH: '',
         buktiPKH: null,
       },
       fileErrors: {
         fotoAnak: '',
         fotoKK: '',
+        fotoAkte: '', // Menambahkan error untuk foto akte
         buktiPKH: '',
       },
     };
@@ -254,6 +287,7 @@ export default {
       // Reset error messages
       this.fileErrors.fotoAnak = '';
       this.fileErrors.fotoKK = '';
+      this.fileErrors.fotoAkte = ''; // Reset error foto akte
       this.fileErrors.buktiPKH = '';
 
       // Validasi file yang diupload
@@ -263,12 +297,15 @@ export default {
       if (!this.formData.fotoKK) {
         this.fileErrors.fotoKK = 'Foto Kartu Keluarga harus diupload';
       }
+      if (!this.formData.fotoAkte) { // Validasi untuk foto akte
+        this.fileErrors.fotoAkte = 'Foto akte harus diupload';
+      }
       if (this.formData.statusPenerimaPKH === 'Ya' && !this.formData.buktiPKH) {
         this.fileErrors.buktiPKH = 'Bukti PKH harus diupload jika terdaftar sebagai penerima PKH';
       }
 
       // Jika tidak ada error, lanjutkan pengiriman data
-      if (!this.fileErrors.fotoAnak && !this.fileErrors.fotoKK && !(this.formData.statusPenerimaPKH === 'Ya' && !this.formData.buktiPKH)) {
+      if (!this.fileErrors.fotoAnak && !this.fileErrors.fotoKK && !this.fileErrors.fotoAkte && !(this.formData.statusPenerimaPKH === 'Ya' && !this.formData.buktiPKH)) {
         // Buat objek FormData untuk mengirimkan data dan file
         const formData = new FormData();
         for (const key in this.formData) {
@@ -327,6 +364,7 @@ export default {
   },
 };
 </script>
+
 
 
 

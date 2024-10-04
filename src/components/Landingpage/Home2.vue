@@ -46,7 +46,7 @@
             Bintang Kasih
           </h1>
           <p class="hero-subtitle">Membentuk generasi yang cerdas dan berbudi pekerti</p>
-          <button @click="showSejarahAlert" class="btn btn-primary mt-3">Sejarah Lengkap</button>
+          <button @click="showSejarahAlert" class="btn btn-purple mt-3">Sejarah Lengkap</button>
         </div>
     </section>
 <!-- Keunggulan Section with Separate Containers -->
@@ -244,6 +244,12 @@
 
   
       <Footer />
+      <button
+        v-if="showButton"
+        :class="['btn', 'btn-top', { 'fade-out': fade }]"
+        @click="scrollToTop">
+        <i class="fas fa-arrow-up"></i> <!-- Ikon Panah ke Atas -->
+    </button>
       <a href="https://wa.me/6282225386373" class="whatsapp-float" target="_blank">
         <i class="bi bi-whatsapp"></i>
       </a>
@@ -252,123 +258,149 @@
   </template>
   
   <script>
-  import axios from 'axios'; // Pastikan axios diinstal melalui npm atau yarn
-  import Swal from 'sweetalert2';
-  import Footer from '../Footer/Footer.vue';
-  import Navmenu2 from '../Navbar/Navmenu2.vue';
-  
-  export default {
-    components: {
-      Navmenu2,
-      Footer,
-    },
-    data() {
-      return {
-        organization: [], // Array kosong untuk menyimpan data API
-        texts: ['KB', 'TK'],
-        currentTextIndex: 0,
-        displayedText: '',
-        charIndex: 0,
-        typingInterval: 150, // Kecepatan mengetik (ms)
-        eraseInterval: 100,  // Kecepatan menghapus (ms)
-        pauseDuration: 1500, // Durasi jeda antar teks (ms)
-        typingTimeoutId: null,
-        eraseTimeoutId: null,
-        pauseTimeoutId: null,
-        isErasing: false
-      };
-    },
-    mounted() {
-      // Fetch data from API ketika komponen di-mount
-      axios.get('https://api.example.com/teachers')
-        .then(response => {
-          this.organization = response.data;  // Mengisi data organisasi dengan hasil API
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
+import axios from 'axios'; // Pastikan axios diinstal melalui npm atau yarn
+import Swal from 'sweetalert2';
+import Footer from '../Footer/Footer.vue';
+import Navmenu2 from '../Navbar/Navmenu2.vue';
 
-      // Mencegah klik kanan pada seluruh gambar di halaman
-      document.addEventListener('contextmenu', (event) => {
-        if (event.target.tagName === 'IMG') {
-          event.preventDefault();
-        }
+export default {
+  components: {
+    Navmenu2,
+    Footer,
+  },
+  data() {
+    return {
+      organization: [], // Array kosong untuk menyimpan data API
+      texts: ['KB', 'TK'],
+      currentTextIndex: 0,
+      displayedText: '',
+      charIndex: 0,
+      typingInterval: 150, // Kecepatan mengetik (ms)
+      eraseInterval: 100,  // Kecepatan menghapus (ms)
+      pauseDuration: 1500, // Durasi jeda antar teks (ms)
+      typingTimeoutId: null,
+      eraseTimeoutId: null,
+      pauseTimeoutId: null,
+      isErasing: false,
+      showButton: false, // Kontrol untuk menampilkan tombol scroll to top
+      fade: false // Properti fade untuk animasi menghilang
+    };
+  },
+  mounted() {
+    // Fetch data from API ketika komponen di-mount
+    axios.get('https://api.example.com/teachers')
+      .then(response => {
+        this.organization = response.data;  // Mengisi data organisasi dengan hasil API
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
       });
 
-      // Memulai efek typewriter
-      this.startTypewriterEffect();
+    // Mencegah klik kanan pada seluruh gambar di halaman
+    document.addEventListener('contextmenu', (event) => {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
+
+    // Memulai efek typewriter
+    this.startTypewriterEffect();
+
+    // Tambahkan event listener untuk scroll halaman
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    // Hapus event listener saat komponen dihancurkan
+    window.removeEventListener('scroll', this.handleScroll);
+    this.stopTypewriterEffect();
+  },
+  methods: {
+    startTypewriterEffect() {
+      this.typeText(this.texts[this.currentTextIndex]);
     },
-    methods: {
-      startTypewriterEffect() {
-        this.typeText(this.texts[this.currentTextIndex]);
-      },
-      typeText(text) {
-        if (this.charIndex < text.length) {
-          this.displayedText += text.charAt(this.charIndex);
-          this.charIndex++;
-          this.typingTimeoutId = setTimeout(() => {
-            this.typeText(text);
-          }, this.typingInterval);
-        } else {
-          this.isErasing = true;
-          this.typingTimeoutId = null;
-          this.charIndex = text.length;
-          this.pauseTimeoutId = setTimeout(() => {
-            this.eraseText();
-          }, this.pauseDuration);
-        }
-      },
-      eraseText() {
-        if (this.charIndex > 0) {
-          this.displayedText = this.displayedText.slice(0, -1);
-          this.charIndex--;
-          this.eraseTimeoutId = setTimeout(() => {
-            this.eraseText();
-          }, this.eraseInterval);
-        } else {
-          this.isErasing = false;
-          this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
-          this.displayedText = '';
-          this.startTypewriterEffect();
-        }
-      },
-      stopTypewriterEffect() {
-        clearTimeout(this.typingTimeoutId);
-        clearTimeout(this.eraseTimeoutId);
-        clearTimeout(this.pauseTimeoutId);
-      },
-      showSejarahAlert() {
-        Swal.fire({
-          title: 'Sejarah Lengkap TK Bintang Kasih',
-          text: 'Sekolah Bintang Kasih terletak di jalan Dolog Lor Raya No.7 Kelurahan Tlogosari Wetan, Kecamatan Pedurungan, Kota Semarang. Lingkungan sekolah berada di daerah perumahan dengan berdekatan jalan raya yang menjadi akses jalan alternatif yang menghubungkan daerah Woltermonginsidi dengan arah Tlogosari sehingga arus lalu lintas cukup ramai.',
-          icon: 'info',
-          confirmButtonText: 'Tutup'
-        });
-      },
-      showDaftarAlert() {
-        Swal.fire({
-          title: 'Pendaftaran Kelompok Bermain',
-          text: 'Silahkan "Kunjungi Halaman" untuk mengisi formulir pendaftaran sebagai Siswa KB & TK Bintang Kasih.',
-          icon: 'question',
-          confirmButtonText: 'Kunjungi Halaman',
-          showCancelButton: true,
-          cancelButtonText: 'Batal',
-          confirmButtonColor: '#007bff',
-          cancelButtonColor: '#d33',
-          reverseButtons: true
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Menggunakan Vue Router untuk redirect
-            this.$router.push('/Formulir');
-          }
-        });
+    typeText(text) {
+      if (this.charIndex < text.length) {
+        this.displayedText += text.charAt(this.charIndex);
+        this.charIndex++;
+        this.typingTimeoutId = setTimeout(() => {
+          this.typeText(text);
+        }, this.typingInterval);
+      } else {
+        this.isErasing = true;
+        this.typingTimeoutId = null;
+        this.charIndex = text.length;
+        this.pauseTimeoutId = setTimeout(() => {
+          this.eraseText();
+        }, this.pauseDuration);
       }
     },
-    beforeDestroy() {
-      this.stopTypewriterEffect();
+    eraseText() {
+      if (this.charIndex > 0) {
+        this.displayedText = this.displayedText.slice(0, -1);
+        this.charIndex--;
+        this.eraseTimeoutId = setTimeout(() => {
+          this.eraseText();
+        }, this.eraseInterval);
+      } else {
+        this.isErasing = false;
+        this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+        this.displayedText = '';
+        this.startTypewriterEffect();
+      }
+    },
+    stopTypewriterEffect() {
+      clearTimeout(this.typingTimeoutId);
+      clearTimeout(this.eraseTimeoutId);
+      clearTimeout(this.pauseTimeoutId);
+    },
+    handleScroll() {
+      // Tampilkan tombol jika scrollY lebih dari 100px
+      this.showButton = window.scrollY > 100;
+    },
+    scrollToTop() {
+      // Mengaktifkan animasi fade-out
+      this.fade = true;
+
+      // Menggunakan timeout agar tombol menghilang setelah animasi selesai
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth', // Scroll dengan animasi halus
+        });
+        this.showButton = false; // Sembunyikan tombol setelah scroll ke atas
+        this.fade = false; // Reset status fade-out
+      }, 500); // Menunggu 500ms sampai animasi fade-out selesai
+    },
+    showSejarahAlert() {
+      Swal.fire({
+        title: 'Sejarah Lengkap TK Bintang Kasih',
+        text: 'Sekolah Bintang Kasih terletak di jalan Dolog Lor Raya No.7 Kelurahan Tlogosari Wetan, Kecamatan Pedurungan, Kota Semarang. Lingkungan sekolah berada di daerah perumahan dengan berdekatan jalan raya yang menjadi akses jalan alternatif yang menghubungkan daerah Woltermonginsidi dengan arah Tlogosari sehingga arus lalu lintas cukup ramai.',
+        icon: 'info',
+        confirmButtonText: 'Tutup'
+      });
+    },
+    showDaftarAlert() {
+      Swal.fire({
+        title: 'Pendaftaran Kelompok Bermain',
+        text: 'Silahkan "Kunjungi Halaman" untuk mengisi formulir pendaftaran sebagai Siswa KB & TK Bintang Kasih.',
+        icon: 'question',
+        confirmButtonText: 'Kunjungi Halaman',
+        showCancelButton: true,
+        cancelButtonText: 'Batal',
+        confirmButtonColor: '#007bff',
+        cancelButtonColor: '#d33',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Menggunakan Vue Router untuk redirect
+          this.$router.push('/Formulir');
+        }
+      });
     }
-  };
+  }
+};
 </script>
+
   
   <style scoped>
   /* Hero Section Styling */
@@ -668,6 +700,50 @@
   
     .purple-shadow {
       box-shadow: 0 4px 8px rgba(127, 134, 212, 0.737);/* Change color and opacity as needed */
+    }
+
+    .btn-purple {
+      background-color: #7f86d4; /* Warna ungu */
+      color: white;
+      border: none;
+      box-shadow: 0 0 10px 2px black; /* Warna hitam di luar tombol */
+    }
+
+    .btn-purple:hover {
+      background-color: #7f86d4; /* Warna hover sedikit lebih gelap */
+      box-shadow: 0 0 12px 3px black; /* Tambahkan sedikit bayangan saat hover */
+    }
+
+    .btn-top {
+    position: fixed;
+    bottom: 130px; /* Jarak di atas tombol WhatsApp */
+    right: 40px;
+    background-color: #c6b6f4; /* Warna ungu */
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px #2929296f; /* Bayangan hitam di luar tombol */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Menambahkan transisi untuk animasi */
+    z-index: 1000; /* Z-index tinggi agar berada di atas elemen lain */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Ukuran ikon lebih besar */
+}
+
+    /* Efek saat tombol hover */
+    .btn-top:hover {
+        background-color: #b180d9;
+        transform: translateY(-5px); /* Panah sedikit naik saat hover */
+    }
+
+    /* Animasi fade-out untuk menghilangkan tombol saat diklik */
+    .fade-out {
+        opacity: 0; /* Mengurangi opacity */
+        transform: translateY(20px); /* Menggeser tombol ke bawah */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Menambahkan transisi untuk opacity dan posisi */
     }
 
   </style>
