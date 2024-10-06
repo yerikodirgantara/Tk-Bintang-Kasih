@@ -674,7 +674,7 @@ section {
     border-color: #1d65a4;
   }
 
- * {
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -746,6 +746,45 @@ body {
 .logos-slide img:hover {
   transform: scale(1.1);
   opacity: 0.9;
+}
+
+/* For tablet screens (768px and above) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .logos-slide img {
+    height: 60px; /* Reduce logo size for tablets */
+    margin: 0px 8px; /* Adjust margin for better spacing */
+  }
+
+  .logos-slide {
+    animation: 15s slide infinite linear; /* Keep animation smooth */
+  }
+  
+  .logos:before,
+  .logos:after {
+    width: 100px; /* Adjust gradient width for smaller screens */
+  }
+}
+
+/* For mobile screens (below 768px) */
+@media only screen and (max-width: 767px) {
+  .logos-slide img {
+    height: 63px; /* Reduce logo size for mobile devices */
+    margin: 0px 8px; /* Smaller margins for narrow screens */
+  }
+
+  .logos-slide {
+    animation: 15s slide infinite linear; /* Slow down animation for smaller devices */
+    animation-timing-function: linear;
+  }
+  .logos-slide::after {
+    content: attr(data-duplicate);
+    display: inline-block;
+  }  
+
+  .logos:before,
+  .logos:after {
+    width: 100px; /* Narrow the fade gradient */
+  }
 }
 
 .btn-purple {
