@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row justify-content-between">
         <!-- Contact Info -->
-        <div class="col-md-6 mb-4 contact-info text-left" data-aos="fade-up">
+        <div class="col-md-6 mb-4 contact-info text-left" data-aos="fade-right">
           <h5 class="text-uppercase mb-3 position-relative">Contact Us:</h5>
-          <hr class="section-underline" data-aos="fade-up" data-aos-delay="100">
-          <p class="mb-3" data-aos="fade-up" data-aos-delay="100">
+          <hr class="section-underline" data-aos="fade-right" data-aos-delay="100">
+          <p class="mb-3" data-aos="fade-right" data-aos-delay="100">
             <i class="fas fa-map-marker-alt"></i> 
             <strong>Alamat</strong><br>
             <span>
@@ -15,7 +15,7 @@
               Jawa Tengah 50196
             </span>
           </p>
-          <p class="mb-3" data-aos="fade-up" data-aos-delay="200">
+          <p class="mb-3" data-aos="fade-right" data-aos-delay="200">
             <i class="fas fa-phone-alt"></i> 
             <strong>Telepon</strong><br>
             <a href="tel:+620248502772" class="text-white">
@@ -25,7 +25,7 @@
               +62 822 2538 6373
             </a>
           </p>
-          <p class="mb-3" data-aos="fade-up" data-aos-delay="300">
+          <p class="mb-3" data-aos="fade-right" data-aos-delay="300">
             <i class="fas fa-envelope"></i> 
             <strong>Email</strong><br>
             <a href="mailto:tkbintangkasih.tlogomulyo@gmail.com" class="text-white">
@@ -36,8 +36,8 @@
 
         <!-- Social Media Links -->
         <div class="col-md-4 mb-4 social-media text-left">
-          <h5 class="text-uppercase mb-3" data-aos="fade-up">Follow Us:</h5>
-          <hr class="section-underline" data-aos="fade-up" data-aos-delay="100">
+          <h5 class="text-uppercase mb-3" data-aos="fade-right">Follow Us:</h5>
+          <hr class="section-underline" data-aos="fade-right" data-aos-delay="100">
           <div class="social-icons d-flex flex-column align-items-start">
             <div class="social-icon-container my-2" data-aos="fade-right" data-aos-delay="200">
               <a href="https://wa.me/6282225386373" class="social-icon" target="_blank">
