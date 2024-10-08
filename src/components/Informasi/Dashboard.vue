@@ -18,28 +18,29 @@
         </div>
   
         <!-- Data lengkap siswa yang muncul saat card diklik -->
-        <div 
-          v-if="showDetails"
-          class="student-details-box"
-          data-aos="fade-left"
-        >
-          <h3>Data Lengkap Siswa</h3>
-          <p><strong>Nama:</strong> {{ student.name }}</p>
-          <p><strong>NIK:</strong> {{ student.nik }}</p>
-          <p><strong>Nama Orang Tua:</strong> {{ student.parentName }}</p>
-          <p><strong>Status:</strong> 
-            <span :class="['status-text', student.status === 'Aktif' ? 'active-text' : 'inactive-text']">
-              {{ student.status }}
-            </span>
-          </p>
-        </div>
+        <transition name="fade">
+          <div 
+            v-if="showDetails"
+            class="student-details-box"
+            data-aos="fade-left"
+          >
+            <h3>Data Lengkap Siswa</h3>
+            <p><strong>Nama:</strong> {{ student.name }}</p>
+            <p><strong>NIK:</strong> {{ student.nik }}</p>
+            <p><strong>Nama Orang Tua:</strong> {{ student.parentName }}</p>
+            <p><strong>Status:</strong> 
+              <span :class="['status-text', student.status === 'Aktif' ? 'active-text' : 'inactive-text']">
+                {{ student.status }}
+              </span>
+            </p>
+          </div>
+        </transition>
       </div>
     </div>
   </template>
   
   <script>
-  import Navmenu from "../Navbar/Navmenu2.vue";
-  import AOS from "aos";
+  import Navmenu from "../Navbar/Navmenu3.vue";
   
   export default {
     name: "Dashboard",
@@ -163,6 +164,15 @@
   
   .inactive-text {
     color: red;
+  }
+  
+  /* Transisi CSS */
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  
+  .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
   }
   </style>
   

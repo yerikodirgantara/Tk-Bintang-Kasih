@@ -8,6 +8,7 @@ import Home2 from '../components/Landingpage/Home2.vue';
 import Navmenu2 from '../components/Navbar/Navmenu2.vue';
 import Formulir from '../components/Form/Formulir.vue';
 import Dashboard from '../components/Informasi/Dashboard.vue';
+import Navmenu3 from '../components/Navbar/Navmenu3.vue';
 
 const routes = [ 
   { path: '/Formulir', name: 'Formulir', component: Formulir }, 
@@ -20,6 +21,7 @@ const routes = [
   { path: '/Home2', name: 'Home2', component: Home2 },
   { path: '/Navmenu2', name: 'Navmenu2', component: Navmenu2 },
   { path: '/Dashboard', name: 'Dashboard', component: Dashboard},
+  { path: '/Navmenu3', name: 'Navmenu2', component: Navmenu3 },
 ];
 
 const router = createRouter({
