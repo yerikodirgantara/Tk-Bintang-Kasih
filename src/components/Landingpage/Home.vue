@@ -220,8 +220,8 @@
       <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="400">
       <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="500">
       <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="600">
-      <img src="../../assets/Logo-YSKI_LOGO-AJA-PNG.png" alt="Logo 5" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="700">
-      <img src="../../assets/Logo-YPL-WEB-SITE.jpg" alt="Logo 6" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="800">
+      <img src="../../assets/images.jpeg" alt="Logo 5" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="700">
+      <img src="../../assets/sd petra.png" alt="Logo 6" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="800">
     </div>
   </div>
 </section>
