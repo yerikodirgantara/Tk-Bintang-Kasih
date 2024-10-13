@@ -262,44 +262,69 @@ export default {
   .button-group {
   display: flex;
   width: 100%;
-  gap: 10px; /* Optional: space between buttons */
+  gap: 10px; /* Space between buttons */
 }
 
-/* Style for the Register button */
+/* Cool Style for the Register button */
 .register-button {
-  flex: 3; /* Makes the button take up 50% of the parent width */
+  flex: 3; /* Takes up more space than the back button */
   padding: 12px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #007bff, #00b4ff); /* Gradient for modern look */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px; /* Rounded corners for modern feel */
   font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Adds space between letters */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the Register button */
+/* Cool Hover effect for the Register button */
 .register-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #008cdb); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Stronger shadow on hover */
 }
 
-/* Style for the Kembali button */
+/* Active/Pressed State for the Register button */
+.register-button:active {
+  transform: scale(0.98); /* Button slightly shrinks when pressed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow when pressed */
+}
+
+/* Cool Style for the Kembali button */
 .back-button {
-  flex: 1; /* Makes the button take up 50% of the parent width */
+  flex: 1; /* Takes up less space than the register button */
   padding: 12px;
-  background-color: #f44336;
+  background: linear-gradient(135deg, #f44336, #ff4c4c); /* Gradient for modern look */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 15px; /* Rounded corners */
   font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the Kembali button */
+/* Cool Hover effect for the Kembali button */
 .back-button:hover {
-  background-color: #d32f2f;
+  background: linear-gradient(135deg, #d32f2f, #ff3b3b); /* Darker gradient on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 67, 54, 0.3); /* Stronger shadow on hover */
 }
+
+/* Active/Pressed State for the Kembali button */
+.back-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow when pressed */
+}
+
   
   .message {
     text-align: center;

@@ -32,11 +32,13 @@
           </div>
         </div>
 
-        <!-- Submit Button with Flexbox for layout -->
+        <!-- Button Group with Flexbox -->
         <div class="button-group">
-          <button @click="goToHome" class="back-button">Kembali</button>
-          <button type="submit" class="register-button">Register</button>
+          <button @click="goToHome" class="cool-button kembali-button">Kembali</button>
+          <button type="submit" class="cool-button">Register</button>
         </div>
+
+
 
         <!-- Link to Register -->
         <div class="login-link-container">
@@ -138,22 +140,75 @@ export default {
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
 }
 
-.login-button {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(90deg, #4a90e2, #50e3c2);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+/* Flexbox Layout for the Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Add some spacing from the form */
 }
 
-.login-button:hover {
-  background: linear-gradient(90deg, #007bff, #2d8cf0);
-  transform: scale(1.05);
+/* Cool Button Styles */
+.cool-button {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #4a90e2, #50e3c2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
+/* Cool Hover Effects */
+.cool-button:hover {
+  background: linear-gradient(135deg, #007bff, #2d8cf0);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Active/Pressed State */
+.cool-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Smaller shadow on press */
+}
+
+/* Smaller Kembali Button */
+.kembali-button {
+  flex: 0.5; /* Reduces the size */
+  padding: 10px; /* Slightly smaller padding */
+  background: linear-gradient(135deg, #f44336, #ff4c4c); /* Red gradient for the Kembali button */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px; /* Slightly smaller font */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Hover effect for the smaller Kembali button */
+.kembali-button:hover {
+  background: linear-gradient(135deg, #d32f2f, #ff3b3b);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 67, 54, 0.3);
+}
+
+/* Active/Pressed State for the smaller Kembali button */
+.kembali-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
 
 .error {
   color: #dc3545;
