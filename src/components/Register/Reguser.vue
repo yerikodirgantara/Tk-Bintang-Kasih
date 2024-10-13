@@ -74,8 +74,12 @@
           <p v-if="confirmPasswordError" class="error">{{ confirmPasswordError }}</p>
         </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="register-button">Register</button>
+        <!-- Submit Button with Flexbox for layout -->
+        <div class="button-group">
+          <button @click="goToHome" class="back-button">Kembali</button>
+          <button type="submit" class="register-button">Register</button>
+        </div>
+
 
         <!-- Error and Success Messages -->
         <p v-if="errorMessage" class="error message">{{ errorMessage }}</p>
@@ -86,6 +90,7 @@
           <span>Sudah mendaftar? Silahkan Login </span>
           <router-link to="/Loguser" class="login-link"> disini</router-link>
         </div>
+        
       </form>
     </div>
   </div>
@@ -100,12 +105,12 @@ export default {
     return {
       user: {
         nik: '',
-        username: '',  // Mengganti 'name' dengan 'username'
+        username: '', // Mengganti 'name' dengan 'username'
         password: '',
         confirmPassword: '',
       },
       nikError: '',
-      usernameError: '',  // Mengganti 'nameError' dengan 'usernameError'
+      usernameError: '', // Mengganti 'nameError' dengan 'usernameError'
       passwordError: '',
       confirmPasswordError: '',
       errorMessage: '',
@@ -119,6 +124,10 @@ export default {
       this[field] = '';
     },
 
+    goToHome() {
+      this.$router.push({ name: 'Home' });
+    },
+
     validateNik() {
       if (this.user.nik.length !== 16) {
         this.nikError = 'NIK harus 16 karakter.';
@@ -126,7 +135,7 @@ export default {
       }
     },
 
-    validateUsername() {  // Mengganti 'validateName' menjadi 'validateUsername'
+    validateUsername() { // Mengganti 'validateName' menjadi 'validateUsername'
       if (this.user.username.length < 3) {
         this.usernameError = 'Nama harus minimal 3 karakter.';
         Swal.fire('Error', this.usernameError, 'error');
@@ -250,21 +259,47 @@ export default {
     font-size: 18px;
   }
   
-  .register-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-button:hover {
-    background-color: #0056b3;
-  }
+  .button-group {
+  display: flex;
+  width: 100%;
+  gap: 10px; /* Optional: space between buttons */
+}
+
+/* Style for the Register button */
+.register-button {
+  flex: 3; /* Makes the button take up 50% of the parent width */
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the Register button */
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the Kembali button */
+.back-button {
+  flex: 1; /* Makes the button take up 50% of the parent width */
+  padding: 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the Kembali button */
+.back-button:hover {
+  background-color: #d32f2f;
+}
   
   .message {
     text-align: center;

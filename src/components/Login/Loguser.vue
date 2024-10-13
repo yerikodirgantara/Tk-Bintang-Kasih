@@ -32,8 +32,11 @@
           </div>
         </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="login-button">Login</button>
+        <!-- Submit Button with Flexbox for layout -->
+        <div class="button-group">
+          <button @click="goToHome" class="back-button">Kembali</button>
+          <button type="submit" class="register-button">Register</button>
+        </div>
 
         <!-- Link to Register -->
         <div class="login-link-container">
@@ -74,7 +77,10 @@ export default {
     },
     togglePasswordVisibility() {
       this.showPassword = !this.showPassword;
-    }
+    },
+    goToHome() {
+      this.$router.push({ name: 'Home' });
+    },
   }
 }
 </script>
