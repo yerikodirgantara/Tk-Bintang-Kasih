@@ -50,3 +50,114 @@
   background-color: #ccc;
   cursor: not-allowed;
 }/*# sourceMappingURL=style.css.map */
+
+.status-pending {
+  color: orange;
+}
+
+.status-processing {
+  color: yellow;
+  font-weight: bold;
+}
+
+.status-confirmed {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.invoice-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h4 {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.form-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.price-section {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.invoice-section {
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-pending {
+  color: orange;
+}
+
+.status-processing {
+  color: blue;
+}
+
+.status-confirmed {
+  color: green;
+}
