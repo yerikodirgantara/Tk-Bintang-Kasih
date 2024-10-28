@@ -60,7 +60,7 @@
                 <button @click="copyAccountNumber" class="copy-button">Copy</button>
             </p>
             <p v-if="copySuccess" class="alert alert-success">No.rekening telah disalin!</p>
-            <p class="account-name"><strong>Atas Nama:</strong> Sekolah Bintang Kasih</p>
+            <p class="account-name"><strong>a/n:</strong> Sekolah Bintang Kasih</p>
         </div>
       </div>
 
