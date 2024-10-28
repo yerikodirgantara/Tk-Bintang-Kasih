@@ -276,9 +276,6 @@ body,
   transition: transform 0.3s; /* Transisi saat hover */
 }
 
-.bank-details:hover {
-  transform: translateY(-5px); /* Efek angkat saat hover */
-}
 
 .bank-details h4 {
   font-family: 'Codec Cold', Arial, sans-serif; /* Font yang lebih modern */
@@ -309,10 +306,6 @@ body,
   transition: background-color 0.3s; /* Transisi warna latar belakang */
 }
 
-.bank-info:hover {
-  background-color: #d7f7d2; /* Efek perubahan warna saat hover */
-}
-
 .bank-name {
   font-size: 1.5rem; /* Ukuran lebih besar untuk nama bank */
   color: #333; /* Warna gelap */
@@ -330,7 +323,6 @@ body,
 }
 
 .account-number:hover, .account-name:hover {
-  transform: scale(1.05); /* Efek membesar saat hover */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan saat hover */
 }
 
