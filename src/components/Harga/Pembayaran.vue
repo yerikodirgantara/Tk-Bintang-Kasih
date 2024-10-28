@@ -106,7 +106,7 @@
           <hr />
 
           <div class="price-item total">
-            <span class="label"><strong>Total Pembayaran:</strong></span>
+            <span class="label"><strong>Total :</strong></span>
             <span class="price"><strong>Rp {{ totalPayment.toLocaleString('id-ID') }}</strong></span>
           </div>
         </div>
@@ -168,7 +168,14 @@ export default {
   },
   computed: {
     isSubmitDisabled() {
-      return !this.isProofUploaded || this.fileError;
+      return (
+        !this.isProofUploaded ||
+        this.fileError ||
+        !this.hasCard ||
+        !this.schoolType ||
+        !this.spiPaymentType ||
+        !this.currentWaveLabel
+      );
     },
     confirmationStatusText() {
       if (this.confirmationStatus === 'pending') return 'Menunggu Konfirmasi';
@@ -261,8 +268,8 @@ export default {
         .then(() => {
           this.copySuccess = true;
           setTimeout(() => {
-            this.copySuccess = false; // Hide alert after 2 seconds
-          }, 2000);
+            this.copySuccess = false; // Hide alert after 3 seconds
+          }, 3000);
         })
         .catch(err => {
           console.error('Failed to copy: ', err);
@@ -271,10 +278,6 @@ export default {
   }
 };
 </script>
-
-
-
-
 
 <style scoped>
 @import './style.css';
