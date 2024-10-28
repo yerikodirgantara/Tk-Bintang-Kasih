@@ -50,12 +50,16 @@
         </select>
       </div>
 
-      <!-- Tampilkan No Rekening setelah program dipilih -->
-      <div v-if="schoolType !== ''" class="bank-details">
+       <!-- Tampilkan No Rekening setelah program dipilih -->
+       <div v-if="schoolType !== ''" class="bank-details">
         <h4>Rekening Pembayaran</h4>
-        <p>Bank XYZ</p>
-        <p>No. Rekening: 1234 5678 910</p>
-        <p>Atas Nama: Sekolah Bintang Kasih</p>
+        <div class="bank-info">
+          <p class="bank-name">Bank XYZ</p>
+          <p class="account-number"><strong>No. Rekening:</strong> 1234 5678 910</p>
+          <p class="account-name"><strong>Atas Nama:</strong> Sekolah Bintang Kasih</p>
+        </div>
+        <div v-if="copySuccessMessage" class="copy-success">{{ copySuccessMessage }}</div>
+        <button @click="copyToClipboard">Salin No Rekening</button>
       </div>
 
       <!-- Rincian Biaya -->
@@ -151,7 +155,8 @@ export default {
       paymentProofFile: null,
       isProofUploaded: false,
       showInvoice: false,
-      confirmationStatus: 'pending'
+      confirmationStatus: 'pending',
+      copySuccessMessage: '', // Add this line to track the success message
     };
   },
   created() {
@@ -206,30 +211,25 @@ export default {
         this.discountAmount = 0;
       }
 
-      this.sppJuly = this.schoolType === 'kb' ? 100000 : this.schoolType === 'tk' ? 115000 : 0;
+      this.sppJuly = this.schoolType === 'kb' ? 100000 : this.schoolType === 'tk' ? 200000 : 0;
+      this.discountedPrice = basePrice - this.discountAmount;
+      this.totalPayment = this.discountedPrice + this.sppJuly;
 
-      if (this.spiPaymentType === 'partial') {
-        this.partialPayment = basePrice * 0.3;
-        this.totalPayment = this.partialPayment + this.sppJuly;
-      } else {
-        this.totalPayment = basePrice + this.sppJuly;
-      }
-
-      this.discountedPrice = basePrice;
+      // Reset the copy success message
+      this.copySuccessMessage = '';
     },
     onFileChange(event) {
       const file = event.target.files[0];
-      // Hapus pemeriksaan ukuran file
-      this.fileError = null;
-      this.isProofUploaded = true;
-    },
-    submitPayment() {
-      Swal.fire('Pembayaran Berhasil', 'Terima kasih telah melakukan pembayaran', 'success');
-      this.showInvoice = true;
-      this.confirmationStatus = 'processing';
+      if (file) {
+        this.isProofUploaded = true;
+      } else {
+        this.isProofUploaded = false;
+      }
     },
     resetForm() {
       this.hasCard = '';
+      this.currentWave = '';
+      this.currentWaveLabel = '';
       this.price = null;
       this.discountAmount = 0;
       this.discountedPrice = null;
@@ -243,10 +243,27 @@ export default {
       this.isProofUploaded = false;
       this.showInvoice = false;
       this.confirmationStatus = 'pending';
+      this.copySuccessMessage = ''; // Clear success message on reset
+    },
+    submitPayment() {
+      // Logic to handle payment submission
+      this.showInvoice = true;
+      this.confirmationStatus = 'processing';
 
-      // Re-run the wave setting logic to keep the wave information intact
-      this.setWaveBasedOnDate();
-    }
+      // Simulate confirmation
+      setTimeout(() => {
+        this.confirmationStatus = 'confirmed';
+      }, 2000);
+    },
+    copyToClipboard() {
+      const accountNumber = "1234 5678 910"; // Nomor rekening
+      navigator.clipboard.writeText(accountNumber).then(() => {
+        this.copySuccessMessage = "No.Rekening telah disalin!";
+        setTimeout(() => {
+          this.copySuccessMessage = '';
+        }, 3000); // Hilangkan pesan setelah 3 detik
+      });
+    },
   }
 };
 </script>
