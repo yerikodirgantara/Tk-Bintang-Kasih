@@ -141,10 +141,6 @@ body,
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.price-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Tambahan bayangan saat hover */
-  transform: translateY(-3px); /* Efek elevasi */
-}
 
 .price-item .label {
   color: #4CAF50; /* Warna hijau untuk konsistensi */
