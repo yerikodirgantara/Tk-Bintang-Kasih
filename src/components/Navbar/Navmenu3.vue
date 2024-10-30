@@ -19,6 +19,7 @@
                 Hai, {{ username }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="/Home2">Beranda</a></li>
                 <li><a class="dropdown-item" href="/Home">Logout</a></li>
               </ul>
             </li>
@@ -30,7 +31,7 @@
   
   <script>
   export default {
-    name: "Navmenu2",
+    name: "Navmenu3",
     data() {
       return {
         username: "" // Ganti ini dengan nama pengguna yang sebenarnya saat login

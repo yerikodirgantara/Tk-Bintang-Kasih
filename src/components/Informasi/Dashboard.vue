@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Navmenu />
+      <Navmenu3 />
       <div class="dashboard">
         <!-- Card profil siswa di sebelah kiri -->
         <div 
@@ -22,8 +22,7 @@
           <div 
             v-if="showDetails"
             class="student-details-box"
-            data-aos="fade-left"
-          >
+            data-aos="fade-left">
             <h3>Data Lengkap Siswa</h3>
             <p><strong>Nama:</strong> {{ student.name }}</p>
             <p><strong>NIK:</strong> {{ student.nik }}</p>
@@ -40,12 +39,12 @@
   </template>
   
   <script>
-  import Navmenu from "../Navbar/Navmenu3.vue";
+  import Navmenu3 from "../Navbar/Navmenu3.vue";
   
   export default {
     name: "Dashboard",
     components: {
-      Navmenu,
+      Navmenu3,
     },
     data() {
       return {

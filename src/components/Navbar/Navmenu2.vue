@@ -42,6 +42,7 @@
               Hai, {{ username }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="/Dashboard">Informasi Akun</a></li>
               <li><a class="dropdown-item" href="/Home">Logout</a></li>
             </ul>
           </li>
