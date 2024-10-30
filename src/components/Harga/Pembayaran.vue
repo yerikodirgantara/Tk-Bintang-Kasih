@@ -143,107 +143,109 @@ import Swal from 'sweetalert2';
 export default {
   data() {
     return {
-      hasCard: '',
-      currentWave: '',
-      currentWaveLabel: '',
-      price: null,
-      discountAmount: 0,
-      discountedPrice: null,
-      sppJuly: null,
-      totalPayment: null,
-      schoolType: '',
-      spiPaymentType: '',
-      churchCardFile: null,
-      fileError: null,
-      paymentProofFile: null,
-      isProofUploaded: false,
-      showInvoice: false,
-      confirmationStatus: 'pending',
-      copySuccess: false // new property for tracking copy success
+      hasCard: '', // Status kartu gereja
+      currentWave: '', // Gelombang saat ini
+      currentWaveLabel: '', // Label gelombang saat ini
+      price: null, // Harga berdasarkan gelombang
+      discountAmount: 0, // Besaran diskon
+      discountedPrice: null, // Harga setelah diskon
+      sppJuly: null, // Biaya SPP Juli
+      totalPayment: null, // Total pembayaran keseluruhan
+      schoolType: '', // Jenis sekolah (KB/TK)
+      spiPaymentType: '', // Jenis pembayaran SPI (parsial/lunas)
+      churchCardFile: null, // File kartu gereja
+      fileError: null, // Status error file
+      paymentProofFile: null, // File bukti pembayaran
+      isProofUploaded: false, // Status upload bukti pembayaran
+      showInvoice: false, // Status tampilan invoice
+      confirmationStatus: 'pending', // Status konfirmasi
+      copySuccess: false // Status keberhasilan copy nomor rekening
     };
   },
   created() {
-    this.setWaveBasedOnDate();
-    this.updatePrice();
+    this.setWaveBasedOnDate(); // Menentukan gelombang berdasarkan tanggal
+    this.updatePrice(); // Memperbarui harga berdasarkan data terbaru
   },
   computed: {
     isSubmitDisabled() {
       return (
-        !this.isProofUploaded ||
-        this.fileError ||
-        !this.hasCard ||
-        !this.schoolType ||
-        !this.spiPaymentType ||
-        !this.currentWaveLabel
+        !this.isProofUploaded || // Menonaktifkan submit jika bukti belum diunggah
+        this.fileError || // Menonaktifkan submit jika ada error file
+        !this.hasCard || // Menonaktifkan submit jika status kartu kosong
+        !this.schoolType || // Menonaktifkan submit jika jenis sekolah kosong
+        !this.spiPaymentType || // Menonaktifkan submit jika tipe pembayaran SPI kosong
+        !this.currentWaveLabel // Menonaktifkan submit jika gelombang kosong
       );
     },
     confirmationStatusText() {
-      if (this.confirmationStatus === 'pending') return 'Menunggu Konfirmasi';
-      if (this.confirmationStatus === 'processing') return 'Sedang Diproses';
-      if (this.confirmationStatus === 'confirmed') return 'Dikonfirmasi Admin';
+      if (this.confirmationStatus === 'pending') return 'Menunggu Konfirmasi'; // Teks konfirmasi pending
+      if (this.confirmationStatus === 'processing') return 'Sedang Diproses'; // Teks konfirmasi processing
+      if (this.confirmationStatus === 'confirmed') return 'Dikonfirmasi Admin'; // Teks konfirmasi confirmed
     },
     confirmationStatusClass() {
-      if (this.confirmationStatus === 'pending') return 'status-pending';
-      if (this.confirmationStatus === 'processing') return 'status-processing';
-      if (this.confirmationStatus === 'confirmed') return 'status-confirmed';
+      if (this.confirmationStatus === 'pending') return 'status-pending'; // Kelas CSS untuk status pending
+      if (this.confirmationStatus === 'processing') return 'status-processing'; // Kelas CSS untuk status processing
+      if (this.confirmationStatus === 'confirmed') return 'status-confirmed'; // Kelas CSS untuk status confirmed
     }
   },
   methods: {
     setWaveBasedOnDate() {
-      const currentMonth = new Date().getMonth();
-      if (currentMonth === 11 || currentMonth === 0) {
+      const currentMonth = new Date().getMonth(); // Mendapatkan bulan saat ini
+      if (currentMonth === 11 || currentMonth === 0) { // Jika bulan Desember - Januari
         this.currentWave = 'wave1';
         this.currentWaveLabel = 'Gelombang 1 (Desember - Januari)';
         this.price = 1000000;
-      } else if (currentMonth >= 1 && currentMonth <= 2) {
+      } else if (currentMonth >= 1 && currentMonth <= 2) { // Jika bulan Februari - Maret
         this.currentWave = 'wave2';
         this.currentWaveLabel = 'Gelombang 2 (Februari - Maret)';
         this.price = 1100000;
-      } else if (currentMonth >= 3 && currentMonth <= 6) {
+      } else if (currentMonth >= 3 && currentMonth <= 6) { // Jika bulan April - Juli
         this.currentWave = 'wave3';
         this.currentWaveLabel = 'Gelombang 3 (April - Juli)';
         this.price = 1200000;
-      } else {
+      } else { // Jika bulan lain, kembali ke Gelombang 1
         this.currentWave = 'wave1';
         this.currentWaveLabel = 'Gelombang 1 (Desember - Januari)';
         this.price = 1000000;
       }
-      this.updatePrice();
+      this.updatePrice(); // Memperbarui harga setelah pengaturan gelombang
     },
     updatePrice() {
       let basePrice;
 
-      if (this.hasCard === 'yes') {
+      if (this.hasCard === 'yes') { // Jika pengguna memiliki kartu gereja
         basePrice = 750000;
-        this.discountAmount = this.price - basePrice;
+        this.discountAmount = this.price - basePrice; // Menghitung jumlah diskon
       } else {
         basePrice = this.price;
-        this.discountAmount = 0;
+        this.discountAmount = 0; // Tidak ada diskon
       }
 
+      // Menghitung biaya SPP Juli berdasarkan tipe sekolah
       this.sppJuly = this.schoolType === 'kb' ? 100000 : this.schoolType === 'tk' ? 115000 : 0;
 
-      if (this.spiPaymentType === 'partial') {
-        this.partialPayment = basePrice * 0.3;
-        this.totalPayment = this.partialPayment + this.sppJuly;
-      } else {
-        this.totalPayment = basePrice + this.sppJuly;
+      if (this.spiPaymentType === 'partial') { // Jika memilih pembayaran parsial
+        this.partialPayment = basePrice * 0.3; // 30% dari harga SPI
+        this.totalPayment = this.partialPayment + this.sppJuly; // Total pembayaran parsial
+      } else { // Jika memilih pembayaran penuh
+        this.totalPayment = basePrice + this.sppJuly; // Total pembayaran penuh
       }
 
-      this.discountedPrice = basePrice;
+      this.discountedPrice = basePrice; // Harga setelah diskon
     },
     onFileChange(event) {
       const file = event.target.files[0];
-      // Hapus pemeriksaan ukuran file
-      this.fileError = null;
-      this.isProofUploaded = true;
+      // Menghapus pemeriksaan ukuran file
+      this.fileError = null; // Menghilangkan error file
+      this.isProofUploaded = true; // Menandai bahwa bukti pembayaran telah diunggah
     },
     submitPayment() {
-      Swal.fire('Pembayaran Berhasil', 'Terima kasih telah melakukan pembayaran', 'success');
-      this.showInvoice = true;
-      this.confirmationStatus = 'processing';
+      Swal.fire('Pembayaran Berhasil', 'Terima kasih telah melakukan pembayaran', 'success'); // Notifikasi sukses pembayaran
+      this.showInvoice = true; // Menampilkan invoice setelah pembayaran berhasil
+      this.confirmationStatus = 'processing'; // Mengubah status konfirmasi ke "processing"
     },
     resetForm() {
+      // Mengatur ulang data form ke nilai awal
       this.hasCard = '';
       this.price = null;
       this.discountAmount = 0;
@@ -259,25 +261,25 @@ export default {
       this.showInvoice = false;
       this.confirmationStatus = 'pending';
 
-      // Re-run the wave setting logic to keep the wave information intact
-      this.setWaveBasedOnDate();
+      this.setWaveBasedOnDate(); // Mengatur ulang logika gelombang
     },
     copyAccountNumber() {
-      const accountNumber = '1234 5678 910'; // The account number
+      const accountNumber = '1234 5678 910'; // Nomor rekening yang akan dicopy
       navigator.clipboard.writeText(accountNumber)
         .then(() => {
-          this.copySuccess = true;
+          this.copySuccess = true; // Menandai bahwa copy berhasil
           setTimeout(() => {
-            this.copySuccess = false; // Hide alert after 3 seconds
+            this.copySuccess = false; // Menyembunyikan notifikasi setelah 3 detik
           }, 3000);
         })
         .catch(err => {
-          console.error('Failed to copy: ', err);
+          console.error('Failed to copy: ', err); // Menampilkan error jika gagal
         });
     }
   }
 };
 </script>
+
 
 <style scoped>
 @import './style.css';
