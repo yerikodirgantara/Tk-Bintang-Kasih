@@ -54,7 +54,7 @@
   <div class="container">
     <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih:</h2>
     <div class="row">
-      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+      <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
         <div class="container">
           <div class="card text-center">
             <div class="card-body pb-3">
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+      <div class="col-md-3" data-aos="fade-left" data-aos-delay="300">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
@@ -87,9 +87,21 @@
           </div>
         </div>
       </div>
+      <div class="col-md-3" data-aos="fade-left" data-aos-delay="400">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="bi bi-award fa-2x mb-3"></i>
+              <h5 class="card-title">Telah mendapatkan Akreditasi B</h5>
+              <p class="card-text">KB & TK Bintang Kasih mendapatkan Akreditasi B yang memberikan pendidikan yang berkualitas dan sesuai standar pendidikan nasional. Akreditasi ini bukti komitmen kami menghasilkan lulusan yang berkualitas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
     <!-- Visi Misi Section with Icons -->
@@ -219,7 +231,7 @@
       <img src="../../assets/logo pendidikan.png" alt="Logo 1" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="300">
       <img src="../../assets/logo_disdik.png" alt="Logo 2" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="400">
       <img src="../../assets/Lambang_Kota_Semarang.png" alt="Logo 3" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="500">
-      <img src="../../assets/cropped-logo-kanisius.png.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="600">
+      <img src="../../assets/kanisius.png" alt="Logo 4" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="600">
       <img src="../../assets/images.jpeg" alt="Logo 5" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="700">
       <img src="../../assets/sd petra.png" alt="Logo 6" class="img-fluid" oncontextmenu="return false;" data-aos="zoom-in" data-aos-delay="800">
     </div>

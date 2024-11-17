@@ -52,9 +52,9 @@
 <!-- Keunggulan Section with Separate Containers -->
 <section id="keunggulan" class="my-5">
   <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">Tentang KB & TK Bintang Kasih:</h2>
+    <h2 class="text-center mb-4" data-aos="fade-left">Tentang KB & TK Bintang Kasih:</h2>
     <div class="row">
-      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+      <div class="col-md-3" data-aos="fade-left" data-aos-delay="100">
         <div class="container">
           <div class="card text-center">
             <div class="card-body pb-3">
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-3" data-aos="fade-left" data-aos-delay="200">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
@@ -76,13 +76,24 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+      <div class="col-md-3" data-aos="fade-right" data-aos-delay="300">
         <div class="container">
           <div class="card text-center">
             <div class="card-body">
               <i class="bi bi-mortarboard fa-2x mb-3"></i>
               <h5 class="card-title">Siap menjadi Lulusan yang Unggul</h5>
               <p class="card-text">TK Bintang Kasih telah melahirkan lulusan unggul dalam akademis dan moral anak, membentuk generasi penerus yang tidak hanya cerdas, tetapi juga berbudi pekerti luhur dan siap menghadapi tantangan dunia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-right" data-aos-delay="400">
+        <div class="container">
+          <div class="card text-center">
+            <div class="card-body">
+              <i class="bi bi-award fa-2x mb-3"></i>
+              <h5 class="card-title">Telah mendapatkan Akreditasi B</h5>
+              <p class="card-text">KB & TK Bintang Kasih mendapatkan Akreditasi B yang memberikan pendidikan yang berkualitas dan sesuai standar pendidikan nasional. Akreditasi ini bukti komitmen kami menghasilkan lulusan yang berkualitas.</p>
             </div>
           </div>
         </div>
